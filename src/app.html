@@ -59,6 +59,8 @@ aside.filters{display:flex;flex-direction:column;gap:22px;align-self:start;posit
 .chip:hover{border-color:var(--muted)}
 .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .chip .dot{width:8px;height:8px;border-radius:50%;background:var(--rc,var(--muted))}
+.rg-north-america{--rc:var(--r-na)}.rg-europe{--rc:var(--r-eu)}.rg-asia-pacific{--rc:var(--r-ap)}.rg-latin-america{--rc:var(--r-la)}.rg-africa{--rc:var(--r-af)}
+.flush{margin:0}
 .chip .n{font:400 11px var(--mono);opacity:.65}
 input[type=search],select{width:100%;border:1.5px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px}
 .countries{max-height:240px;overflow:auto;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);margin-top:8px}
@@ -163,7 +165,7 @@ input[type=search],select{width:100%;border:1.5px solid var(--line);background:v
         <input type="search" id="cq" placeholder="Find a country">
         <div class="countries" id="countries"></div></div>
       <div class="fgroup"><h3>Genre <button type="button" data-clear="genres">Clear</button></h3><div class="chips" id="genres"></div></div>
-      <div class="fgroup"><h3>Size · typical attendance <button type="button" data-clear="sizes">Clear</button></h3><div class="chips" id="sizes"></div></div>
+      <div class="fgroup"><h3>Size &#xB7; typical attendance <button type="button" data-clear="sizes">Clear</button></h3><div class="chips" id="sizes"></div></div>
       <div class="fgroup"><h3>Dates</h3>
         <label class="switch"><input type="checkbox" id="confirmedOnly"> Confirmed dates only</label>
       </div>
@@ -186,16 +188,16 @@ input[type=search],select{width:100%;border:1.5px solid var(--line);background:v
 <div id="subUI" hidden>
   <div class="scrim" id="scrim"></div>
   <div class="drawer" role="dialog" aria-modal="true" aria-labelledby="subTitle">
-    <button class="close" id="closeSub" type="button" aria-label="Close">×</button>
+    <button class="close" id="closeSub" type="button" aria-label="Close">&#xD7;</button>
     <h2 id="subTitle">Subscribe</h2>
-    <p class="note" style="margin:0">A subscription stays in sync: when festival dates are confirmed or details change, the events update in your calendar on their own. Google refreshes subscribed calendars every 12–24 hours.</p>
+    <p class="note flush">A subscription stays in sync: when festival dates are confirmed or details change, the events update in your calendar on their own. Google refreshes subscribed calendars every 12&#x2013;24 hours.</p>
     <div class="feedcard">
       <span class="count" id="feedHint">Matches your current filters</span>
       <span class="fname" id="feedName"></span>
       <span class="count" id="feedCount"></span>
       <div class="url"><input id="feedUrl" readonly aria-label="Calendar feed address"><button class="btn small" id="copy" type="button">Copy</button></div>
       <div class="top-actions"><a class="btn small primary" id="gcal" target="_blank" rel="noopener">Add to Google Calendar</a><a class="btn small" id="webcal">Open in Apple / Outlook</a></div>
-      <p class="note" id="notLive" hidden style="margin:0">The feed address goes live once the site is published on GitHub Pages.</p>
+      <p class="note flush" id="notLive" hidden>The feed address goes live once the site is published on GitHub Pages.</p>
     </div>
     <h3>Or pick another calendar</h3>
     <div class="pick">
@@ -203,35 +205,38 @@ input[type=search],select{width:100%;border:1.5px solid var(--line);background:v
       <select id="pickKey" aria-label="Feed"></select>
     </div>
     <h3>Google Calendar (Gmail)</h3>
-    <ol class="steps"><li>Click <b>Add to Google Calendar</b> above and confirm, or</li><li>In Google Calendar, next to <b>Other calendars</b> click <b>+</b> → <b>From URL</b>, paste the address, then <b>Add calendar</b>.</li></ol>
+    <ol class="steps"><li>Click <b>Add to Google Calendar</b> above and confirm, or</li><li>In Google Calendar, next to <b>Other calendars</b> click <b>+</b> &#x2192; <b>From URL</b>, paste the address, then <b>Add calendar</b>.</li></ol>
     <h3>Zoho Calendar</h3>
-    <ol class="steps"><li>Copy the address above.</li><li>In Zoho Calendar, click <b>+</b> next to <b>Subscribed Calendars</b> → <b>Subscribe by URL</b>.</li><li>Paste the address, name it, and click <b>Subscribe</b>.</li></ol>
+    <ol class="steps"><li>Copy the address above.</li><li>In Zoho Calendar, click <b>+</b> next to <b>Subscribed Calendars</b> &#x2192; <b>Subscribe by URL</b>.</li><li>Paste the address, name it, and click <b>Subscribe</b>.</li></ol>
   </div>
 </div>
 <div class="toast" id="toast" hidden></div>
 
 <script>
-const RC={"North America":"var(--r-na)","Europe":"var(--r-eu)","Asia-Pacific":"var(--r-ap)","Latin America":"var(--r-la)","Africa":"var(--r-af)"};
+const RG={"North America":"rg-north-america","Europe":"rg-europe","Asia-Pacific":"rg-asia-pacific","Latin America":"rg-latin-america","Africa":"rg-africa"};
 const SIZE_ORDER=["boutique","mid","large","major","mega"];
 const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
 const MS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const S={regions:new Set(),countries:new Set(),genres:new Set(),sizes:new Set(),q:"",cq:"",confirmedOnly:false,view:"list",month:null,open:null};
 let D,F,byId;
 const $=id=>document.getElementById(id);
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const esc=s=>String(s).replace(/[&<>"'`]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}[c]));
+// Only plain https links from the data are ever turned into clickable links.
+const safeUrl=u=>/^https:\/\/[a-z0-9.-]+(\/[A-Za-z0-9._~%!$&'()*+,;=:@\/?-]*)?$/.test(String(u))?u:"";
+const isId=v=>/^[a-z0-9-]{1,60}$/.test(v);
 const pd=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
 const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
 const todayISO=iso(new Date());
 
 function fmtRange(a,b){const s=pd(a),e=pd(b);
   if(a===b)return `${MS[s.getMonth()]} ${s.getDate()}`;
-  if(s.getMonth()===e.getMonth()&&s.getFullYear()===e.getFullYear())return `${MS[s.getMonth()]} ${s.getDate()}–${e.getDate()}`;
-  return `${MS[s.getMonth()]} ${s.getDate()} – ${MS[e.getMonth()]} ${e.getDate()}`+(s.getFullYear()!==e.getFullYear()?` ${e.getFullYear()}`:"")}
+  if(s.getMonth()===e.getMonth()&&s.getFullYear()===e.getFullYear())return `${MS[s.getMonth()]} ${s.getDate()}\u2013${e.getDate()}`;
+  return `${MS[s.getMonth()]} ${s.getDate()} \u2013 ${MS[e.getMonth()]} ${e.getDate()}`+(s.getFullYear()!==e.getFullYear()?` ${e.getFullYear()}`:"")}
 const days=(a,b)=>Math.round((pd(b)-pd(a))/864e5)+1;
 
 function load(){
   try{const saved=JSON.parse(localStorage.getItem("fc-filters")||"null");
-    if(saved){for(const k of["regions","countries","genres","sizes"])S[k]=new Set(saved[k]||[]);S.confirmedOnly=!!saved.confirmedOnly;S.view=saved.view||"list"}}catch(e){}
+    if(saved&&typeof saved==="object"){for(const k of["regions","countries","genres","sizes"])S[k]=new Set((Array.isArray(saved[k])?saved[k]:[]).filter(v=>typeof v==="string"&&v.length<80));S.confirmedOnly=!!saved.confirmedOnly;S.view=saved.view==="month"?"month":"list"}}catch(e){}
 }
 function save(){try{localStorage.setItem("fc-filters",JSON.stringify({regions:[...S.regions],countries:[...S.countries],genres:[...S.genres],sizes:[...S.sizes],confirmedOnly:S.confirmedOnly,view:S.view}))}catch(e){}}
 
@@ -248,7 +253,7 @@ function filtered(){return D.events.filter(e=>evMatch(e)&&festMatch(byId[e.fid])
 function chip(label,on,attrs,extra=""){return `<button type="button" class="chip" aria-pressed="${on}" ${attrs}>${extra}${esc(label)}</button>`}
 function renderFilters(){
   const cnt=(skip,pred)=>F.filter(f=>festMatch(f,skip)&&pred(f)).length;
-  $("regions").innerHTML=D.regions.map(r=>chip(r,S.regions.has(r),`data-k="regions" data-v="${esc(r)}" style="--rc:${RC[r]}"`,'<span class="dot"></span>')).join("");
+  $("regions").innerHTML=D.regions.map(r=>chip(r,S.regions.has(r),`data-k="regions" data-v="${esc(r)}"`,`<span class="dot ${RG[r]}"></span>`)).join("");
   $("genres").innerHTML=D.genres.map(g=>{const n=cnt("genres",f=>f.genres.includes(g));return n||S.genres.has(g)?chip(g,S.genres.has(g),`data-k="genres" data-v="${esc(g)}"`).replace("</button>",` <span class="n">${n}</span></button>`):""}).join("");
   $("sizes").innerHTML=[...D.sizes].reverse().map(s=>chip(s.label,S.sizes.has(s.slug),`data-k="sizes" data-v="${s.slug}"`,meter(s.slug))).join("");
   let h="";for(const r of D.regions){
@@ -264,12 +269,12 @@ const fmtN=n=>n>=1e6?(n/1e6).toFixed(n>=1e7?0:1).replace(/\.0$/,"")+"M":n>=1e3?M
 function pill(st){return st==="confirmed"?'<span class="pill confirmed">Confirmed</span>':st==="cancelled"?'<span class="pill cancelled">Cancelled</span>':'<span class="pill projected">Dates TBC</span>'}
 
 function detail(e,f){
-  const src=e.source&&e.source.startsWith("http")?` · <a href="${esc(e.source)}" target="_blank" rel="noopener">source</a>`:"";
-  const sugg=D.repo?`<a href="https://github.com/${D.repo}/issues/new?template=festival.yml&title=${encodeURIComponent("Update: "+f.name)}&festival_id=${encodeURIComponent(f.id)}" target="_blank" rel="noopener">Suggest a correction</a>`:"";
-  return `<div class="detail" onclick="event.stopPropagation()">
+  const src=safeUrl(e.source)?` \u00b7 <a href="${esc(safeUrl(e.source))}" target="_blank" rel="noopener">source</a>`:"";
+  const sugg=/^[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/.test(D.repo||"")?`<a href="https://github.com/${D.repo}/issues/new?template=festival.yml&title=${encodeURIComponent("Update: "+f.name)}&festival_id=${encodeURIComponent(f.id)}" target="_blank" rel="noopener">Suggest a correction</a>`:"";
+  return `<div class="detail">
     <span>${e.status==="confirmed"?"Dates announced by the festival"+src:"Projected from the festival's usual timing. Will update when announced."}</span>
     <span>Typical attendance ~${f.attendance.toLocaleString()}</span>
-    ${f.website?`<a href="${esc(f.website)}" target="_blank" rel="noopener">Official website</a>`:`<a href="https://www.google.com/search?q=${encodeURIComponent(f.name+" "+f.country+" festival dates")}" target="_blank" rel="noopener">Search for dates</a>`}
+    ${safeUrl(f.website)?`<a href="${esc(safeUrl(f.website))}" target="_blank" rel="noopener noreferrer">Official website</a>`:`<a href="https://www.google.com/search?q=${encodeURIComponent(f.name+" "+f.country+" festival dates")}" target="_blank" rel="noopener">Search for dates</a>`}
     ${sugg}</div>`}
 
 function renderList(evs){
@@ -281,8 +286,8 @@ function renderList(evs){
   for(const[k,list]of[...groups].sort()){const[y,m]=k.split("-").map(Number);
     h+=`<section class="month"><h2>${MONTHS[m-1]} ${y} <small>${list.length} festival${list.length>1?"s":""}</small></h2>`;
     for(const e of list){const f=byId[e.fid];const id=`${e.fid}|${e.start}`;
-      h+=`<article class="row" style="--rc:${RC[f.region]}" data-open="${esc(id)}" id="${f.id}">
-        <div class="when">${fmtRange(e.start,e.end)}<small>${days(e.start,e.end)} day${days(e.start,e.end)>1?"s":""}${e.part?" · "+esc(e.part):""}</small></div>
+      h+=`<article class="row ${RG[f.region]}" data-open="${esc(id)}" id="${f.id}">
+        <div class="when">${fmtRange(e.start,e.end)}<small>${days(e.start,e.end)} day${days(e.start,e.end)>1?"s":""}${e.part?" \u00b7 "+esc(e.part):""}</small></div>
         <div><div class="name">${esc(f.name)}</div><div class="where">${esc([f.city,f.country].filter(Boolean).join(", "))}</div>
           <div class="tags">${f.genres.map(g=>`<span class="tag">${esc(g)}</span>`).join("")}</div></div>
         <div class="meta">${pill(e.status)}<span class="sizecell" title="Typical attendance">${meter(f.size)} ${fmtN(f.attendance)}</span></div>
@@ -298,14 +303,14 @@ function renderMonth(evs){
   const mStart=iso(first),mEnd=iso(last);
   const inMonth=evs.filter(e=>e.start<=mEnd&&e.end>=mStart);
   const long=inMonth.filter(e=>days(e.start,e.end)>21),short=inMonth.filter(e=>days(e.start,e.end)<=21);
-  let h=`<div class="mhead"><button class="btn small" data-nav="-1" type="button" aria-label="Previous month">←</button><h2>${MONTHS[m-1]} ${y}</h2><button class="btn small" data-nav="1" type="button" aria-label="Next month">→</button><span class="count">${inMonth.length} festivals</span></div>`;
-  if(long.length)h+=`<div class="longrun"><span>Running all month:</span>${long.map(e=>`<button type="button" class="ev ${e.status!=="confirmed"?"tbc":""}" style="--rc:${RC[byId[e.fid].region]}" data-goto="${e.fid}">${esc(byId[e.fid].name)}</button>`).join("")}</div>`;
+  let h=`<div class="mhead"><button class="btn small" data-nav="-1" type="button" aria-label="Previous month">\u2190</button><h2>${MONTHS[m-1]} ${y}</h2><button class="btn small" data-nav="1" type="button" aria-label="Next month">\u2192</button><span class="count">${inMonth.length} festivals</span></div>`;
+  if(long.length)h+=`<div class="longrun"><span>Running all month:</span>${long.map(e=>`<button type="button" class="ev ${e.status!=="confirmed"?"tbc":""} ${RG[byId[e.fid].region]}" data-goto="${e.fid}">${esc(byId[e.fid].name)}</button>`).join("")}</div>`;
   h+='<div class="gridwrap"><div class="grid">'+["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(d=>`<div class="dow">${d}</div>`).join("");
   const d=new Date(startGrid);
   for(let i=0;i<42;i++){const di=iso(d);const out=d.getMonth()!==m-1;
     const todays=short.filter(e=>e.start<=di&&e.end>=di).sort((a,b)=>byId[b.fid].attendance-byId[a.fid].attendance);
     h+=`<div class="cell ${out?"out":""} ${di===todayISO?"today":""}"><span class="d">${d.getDate()}</span>`;
-    if(!out){todays.slice(0,4).forEach(e=>{const f=byId[e.fid];h+=`<button type="button" class="ev ${e.status!=="confirmed"?"tbc":""}" style="--rc:${RC[f.region]}" title="${esc(f.name)} · ${esc(f.country)} · ${fmtRange(e.start,e.end)}" data-goto="${f.id}">${esc(f.name)}</button>`});
+    if(!out){todays.slice(0,4).forEach(e=>{const f=byId[e.fid];h+=`<button type="button" class="ev ${e.status!=="confirmed"?"tbc":""} ${RG[f.region]}" title="${esc(f.name)} \u00b7 ${esc(f.country)} \u00b7 ${fmtRange(e.start,e.end)}" data-goto="${f.id}">${esc(f.name)}</button>`});
       if(todays.length>4)h+=`<button type="button" class="more" data-day="${di}">+${todays.length-4} more</button>`}
     h+="</div>";d.setDate(d.getDate()+1);if(i>=34&&d.getMonth()!==m-1&&d.getDay()===1)break}
   return h+"</div></div>"}
@@ -321,7 +326,7 @@ function render(){
 }
 
 // ---- subscribe
-function feedUrl(path){return D.siteUrl?`${D.siteUrl}/${path}`:path}
+function feedUrl(path){if(!/^feeds\/[a-z0-9\/-]+\.ics$/.test(path))return "";return D.siteUrl&&safeUrl(D.siteUrl)?`${D.siteUrl}/${path}`:path}
 function bestFeed(){
   const one=s=>s.size===1?[...s][0]:null;const slug=s=>s.normalize("NFKD").replace(/[^\x00-\x7f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
   const rslug=r=>slug(r);const fe=D.feeds;
@@ -331,11 +336,11 @@ function bestFeed(){
   if(r)return["region",rslug(r)];if(g)return["genre",slug(g)];if(z)return["size",z];return["all","all"]}
 function fillPick(kind,key){
   $("pickKind").value=kind;const opts=D.feeds[kind];
-  $("pickKey").innerHTML=Object.entries(opts).map(([k,v])=>`<option value="${k}">${esc(v.name.replace("Festivals — ",""))} (${v.count})</option>`).join("");
+  $("pickKey").innerHTML=Object.entries(opts).map(([k,v])=>`<option value="${k}">${esc(v.name.replace("Festivals \u2014 ",""))} (${v.count})</option>`).join("");
   $("pickKey").value=key;$("pickKey").disabled=kind==="all";showFeed(kind,key)}
 function showFeed(kind,key){const f=D.feeds[kind][key];if(!f)return;
   const url=feedUrl(f.path);$("feedName").textContent=f.name;$("feedCount").textContent=`${f.count} events`;$("feedUrl").value=url;
-  const live=!!D.siteUrl;$("notLive").hidden=live;
+  const live=!!(D.siteUrl&&safeUrl(D.siteUrl)&&url);$("notLive").hidden=live;
   $("gcal").href=live?`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(url.replace(/^https?:/,"webcal:"))}`:"#";
   $("webcal").href=live?url.replace(/^https?:/,"webcal:"):"#"}
 function openSub(){const[k,v]=bestFeed();const b=bestFeed().join()!=="all,all";$("feedHint").textContent=b?"Matches your current filters":"All festivals";fillPick(k,v);$("subUI").hidden=false;$("closeSub").focus()}
@@ -351,6 +356,7 @@ document.addEventListener("click",e=>{
   const nav=e.target.closest("[data-nav]");if(nav){const[y,m]=S.month.split("-").map(Number);const d=new Date(y,m-1+Number(nav.dataset.nav),1);S.month=iso(d).slice(0,7);render();return}
   const go=e.target.closest("[data-goto]");if(go){const ev=filtered().find(x=>x.fid===go.dataset.goto&&x.end>=todayISO);S.view="list";S.open=ev?`${ev.fid}|${ev.start}`:null;render();const el=$(go.dataset.goto);if(el)el.scrollIntoView({block:"center"});return}
   const more=e.target.closest("[data-day]");if(more){S.view="list";render();return}
+  if(e.target.closest(".detail"))return;
   const row=e.target.closest("[data-open]");if(row){S.open=S.open===row.dataset.open?null:row.dataset.open;render();return}
 });
 document.addEventListener("change",e=>{const t=e.target;if(t.matches("input[data-k]")){t.checked?S.countries.add(t.dataset.v):S.countries.delete(t.dataset.v);render()}});
@@ -363,15 +369,15 @@ $("openSub").onclick=openSub;$("closeSub").onclick=$("scrim").onclick=()=>{$("su
 document.addEventListener("keydown",e=>{if(e.key==="Escape")$("subUI").hidden=true});
 $("pickKind").onchange=e=>{const k=e.target.value;fillPick(k,Object.keys(D.feeds[k])[0])};
 $("pickKey").onchange=e=>showFeed($("pickKind").value,e.target.value);
-$("copy").onclick=()=>{const v=$("feedUrl").value;navigator.clipboard.writeText(v).then(()=>toast("Address copied"),()=>{$("feedUrl").select();toast("Press Ctrl+C / ⌘C to copy")})};
+$("copy").onclick=()=>{const v=$("feedUrl").value;navigator.clipboard.writeText(v).then(()=>toast("Address copied"),()=>{$("feedUrl").select();toast("Press Ctrl+C / \u2318C to copy")})};
 
 fetch("data/festivals.json").then(r=>r.json()).then(d=>{
-  D=d;F=d.festivals;byId=Object.fromEntries(F.map(f=>[f.id,f]));
+  D=d;F=d.festivals;byId=Object.create(null);for(const f of F)if(isId(f.id))byId[f.id]=f;
   load();$("confirmedOnly").checked=S.confirmedOnly;
   const conf=new Set(d.events.filter(e=>e.status==="confirmed").map(e=>e.fid)).size;
   $("sub").textContent=`${F.length} music and art festivals across North America, Europe, Asia-Pacific, Latin America and Africa. Updated ${d.generated.slice(0,4)}-${d.generated.slice(4,6)}-${d.generated.slice(6,8)}.`;
-  if(d.repo){$("suggest").hidden=false;$("suggest").href=`https://github.com/${d.repo}/issues/new?template=festival.yml`}
-  const h=location.hash.slice(1);if(h&&byId[h]){const ev=d.events.find(e=>e.fid===h&&e.end>=todayISO);if(ev)S.open=`${ev.fid}|${ev.start}`;S.view="list"}
-  render();if(h&&byId[h]){const el=$(h);if(el)el.scrollIntoView({block:"center"})}
+  if(/^[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/.test(d.repo||"")){$("suggest").hidden=false;$("suggest").href=`https://github.com/${d.repo}/issues/new?template=festival.yml`}
+  const h=location.hash.slice(1);if(isId(h)&&Object.hasOwn(byId,h)){const ev=d.events.find(e=>e.fid===h&&e.end>=todayISO);if(ev)S.open=`${ev.fid}|${ev.start}`;S.view="list"}
+  render();if(isId(h)&&Object.hasOwn(byId,h)){const el=$(h);if(el)el.scrollIntoView({block:"center"})}
 }).catch(()=>{$("view").innerHTML='<div class="empty">The festival data could not be loaded. Reload the page to try again.</div>'});
 </script>

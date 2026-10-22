@@ -35,7 +35,7 @@ body:
     id: details
     attributes:
       label: Other details
-      description: City, country, genres, typical total attendance, website — whatever is new or wrong.
+      description: City, country, genres, typical total attendance, website - whatever is new or wrong.
   - type: input
     id: source
     attributes:

@@ -15,11 +15,17 @@ Each event in the feeds keeps a stable ID based on the festival, the year and th
 
 ## Updating the calendar
 
-Every change pushed to `main` is checked and published within about two minutes by `.github/workflows/deploy.yml`. If something is wrong, for example an unknown genre, a bad date or a duplicate ID, the build fails and the error names the file and line.
+All changes go through a **pull request**. Before anything can be merged, it must pass the
+**Security and data check** and be approved by the repository owner. After merging, the site
+and feeds republish in about two minutes. If a check fails, the message names the file, line
+and problem. See [SECURITY.md](SECURITY.md) for everything that is checked.
 
-**Easiest:** open an issue with the **Add or correct a festival** form. There is also a link to it in the site header. A weekly scheduled task works through open requests and checks dates against official sources.
+**Easiest:** open an issue with the **Add or correct a festival** form. There is also a link to
+it in the site header. The weekly scheduled task works through these requests, checks them
+against official sources and opens a pull request for review.
 
-**Direct edit:** open a file on GitHub, click the pencil icon, edit it and commit.
+**Direct edit:** open a file on GitHub, click the pencil icon, choose **Create a new branch and
+start a pull request**, and submit.
 
 | To… | Edit | Example row |
 |---|---|---|
@@ -66,7 +72,8 @@ The **Subscribe** button on the site picks the feed that matches your current fi
 ## Running locally
 
 ```
-python3 scripts/build.py      # writes site/
+python3 -I scripts/security_check.py   # the same scan that runs on every pull request
+python3 -I scripts/build.py            # validates the data and writes site/
 cd site && python3 -m http.server
 ```
 

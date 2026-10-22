@@ -1,44 +1,57 @@
 name: Build and publish calendar
 
+# Runs only for commits that are already on main (which requires a reviewed pull request),
+# on a daily schedule so projected dates roll forward, or when started by hand.
 on:
   push:
     branches: [main]
   schedule:
-    - cron: "17 5 * * *"   # daily, so projected dates roll forward and past events drop off
+    - cron: "17 5 * * *"
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# Nothing is granted by default; each job asks for the least it needs.
+permissions: {}
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Runs repository code, so it gets read-only access and no secrets.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
-          python-version: "3.12"
-      - name: Validate data and build feeds
+          persist-credentials: false
+      - name: Security check
+        run: python3 -I scripts/security_check.py
+      - name: Validate data and build site and feeds
         env:
-          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
-          REPO: ${{ github.repository }}
-        run: python3 scripts/build.py
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+          OWNER: ${{ github.repository_owner }}
+          REPO_FULL: ${{ github.repository }}
+        run: |
+          owner="${OWNER,,}"
+          name="${REPO_FULL#*/}"
+          SITE_URL="https://${owner}.github.io/${name}" REPO="$REPO_FULL" python3 -I scripts/build.py
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
           path: site
+
   deploy:
+    # Publishes the files built above. Runs no repository code.
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
