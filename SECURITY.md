@@ -52,8 +52,8 @@ every change is treated as untrusted until it passes automated checks and an own
      the files already built.
    - Pull requests from forks run with a read-only token.
 5. **Locked-down website.**
-   - A Content Security Policy lets the page run only its own `app.js`, fetch only its own
-     data, and load fonts from Google Fonts.
+   - A Content Security Policy lets the page run only its own `app.js` and fetch only its own
+     data. It uses the visitor's system fonts, so nothing is loaded from Google or any other site.
    - Inline scripts, inline styles, frames, plugins and form posts are blocked.
    - All festival text is HTML-escaped before display.
    - Links are re-checked in the browser and only `https:` links become clickable.

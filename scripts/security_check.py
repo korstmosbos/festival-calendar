@@ -121,7 +121,7 @@ JS_BANNED = [
     (r"\bstyle\s*=\s*[\"']", "inline style attribute (blocked by the site's security policy)"),
     (r"insertAdjacentHTML|outerHTML|createContextualFragment", "raw HTML insertion API"),
 ]
-JS_ALLOWED_HOSTS = {"fonts.googleapis.com", "fonts.gstatic.com", "github.com",
+JS_ALLOWED_HOSTS = {"github.com",
                     "calendar.google.com", "www.google.com"}
 FETCH_RE = re.compile(r"\bfetch\s*\(\s*(['\"`])([^'\"`]*)\1")
 

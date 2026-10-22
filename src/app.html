@@ -1,8 +1,5 @@
 <title>Festival Circuit</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
 /* Layout: filter rail on the left, a "running order" list or month grid on the right, subscribe drawer from the right edge. */
 :root{
@@ -10,9 +7,10 @@
   --ink:#1c1a2b; --muted:#625e78; --accent:#d93a63; --accent-ink:#ffffff; --accent-soft:#fbe3ea;
   --ok:#1f7a55; --ok-soft:#dcf1e7; --tbc:#8a5a00; --tbc-soft:#fbefd6;
   --r-na:#2f6fdb; --r-eu:#7a4fd6; --r-ap:#11898a; --r-la:#e0662b; --r-af:#b58a00;
-  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
-  --body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  /* System fonts only: nothing is downloaded from another site. */
+  --display:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#13121c; --surface:#1c1a28; --sunk:#252335; --line:#34314a;
