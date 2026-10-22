@@ -1,9 +1,11 @@
 name: Security and data check
 
-# Runs on every pull request. Uses the plain pull_request trigger, so changes proposed from
+# Runs on every pull request and on main. Uses the plain pull_request trigger, so changes proposed from
 # forks run with a read-only token and no secrets.
 on:
   pull_request:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions: {}
