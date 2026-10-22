@@ -1,0 +1,85 @@
+id,name,city,country,genres,attendance,pattern,years,website
+fuji-rock,Fuji Rock Festival,Yuzawa,Japan,Rock;Indie;Electronic,115000,7/L/Fri/3,,https://www.fujirockfestival.com
+summer-sonic,Summer Sonic,Tokyo and Osaka,Japan,Pop;Rock;Hip-Hop;Electronic,250000,8/3/Sat/2,,https://www.summersonic.com
+rock-in-japan,Rock in Japan Festival,Chiba,Japan,Rock;Pop,270000,8/1/Sat/5,,https://rijfes.jp
+countdown-japan,Countdown Japan,Chiba,Japan,Rock;Pop,200000,F/12-28/4,,https://countdownjapan.jp
+rising-sun,Rising Sun Rock Festival,Ishikari,Japan,Rock;Pop,70000,8/2/Fri/2,,https://rsr.wess.co.jp
+ultra-japan,Ultra Japan,Tokyo,Japan,Electronic,120000,9/3/Sat/2,,https://ultrajapan.com
+greenroom,GREENROOM Festival,Yokohama,Japan,Reggae;Indie;Rock,50000,5/4/Sat/2,,https://greenroom.jp
+tokyo-jazz,Tokyo Jazz Festival,Tokyo,Japan,Jazz,40000,10/4/Fri/3,,https://www.tokyo-jazz.com
+setouchi-triennale,Setouchi Triennale,Takamatsu,Japan,Arts,1000000,4/3/Fri/220,every3:2025,https://setouchi-artfest.jp
+aichi-triennale,Aichi Triennale,Nagoya,Japan,Arts,600000,9/2/Sat/77,every3:2025,https://aichitriennale.jp
+japan-jam,Japan Jam,Chiba,Japan,Rock;Pop,120000,5/1/Sat/4,,https://japanjam.jp
+waterbomb-seoul,Waterbomb Seoul,Seoul,South Korea,Pop;Hip-Hop;Electronic,100000,7/1/Fri/3,,https://waterbombfestival.com
+pentaport,Incheon Pentaport Rock Festival,Incheon,South Korea,Rock;Indie,150000,8/1/Fri/3,,https://www.pentaport.co.kr
+busan-rock,Busan International Rock Festival,Busan,South Korea,Rock,100000,10/1/Sat/2,,
+seoul-jazz,Seoul Jazz Festival,Seoul,South Korea,Jazz;Pop;R&B/Soul,60000,5/L/Fri/3,,https://www.seouljazz.co.kr
+world-dj-festival,World DJ Festival,Gapyeong,South Korea,Electronic,80000,6/2/Fri/3,,
+jarasum-jazz,Jarasum International Jazz Festival,Gapyeong,South Korea,Jazz,100000,10/1/Fri/3,,https://www.jarasumjazz.com
+frieze-seoul,Frieze Seoul,Seoul,South Korea,Arts,70000,9/1/Wed/4,,https://www.frieze.com
+gwangju-biennale,Gwangju Biennale,Gwangju,South Korea,Arts,700000,9/1/Sat/86,even,https://www.gwangjubiennale.org
+strawberry-beijing,Strawberry Music Festival Beijing,Beijing,China,Rock;Indie;Pop,100000,5/1/Wed/3,,
+midi-festival,Midi Music Festival,Beijing,China,Rock;Metal,80000,5/1/Wed/3,,
+storm-festival,Storm Festival Shanghai,Shanghai,China,Electronic,100000,10/1/Fri/3,,
+clockenflap,Clockenflap,Hong Kong,Hong Kong,Indie;Rock;Pop;Hip-Hop,75000,12/1/Fri/3,,https://www.clockenflap.com
+art-basel-hong-kong,Art Basel Hong Kong,Hong Kong,Hong Kong,Arts,90000,3/L/Wed/5,,https://www.artbasel.com
+hong-kong-arts,Hong Kong Arts Festival,Hong Kong,Hong Kong,Arts;Classical,100000,2/L/Fri/30,,https://www.hk.artsfestival.org
+megaport,Megaport Festival,Kaohsiung,Taiwan,Rock;Indie,80000,3/L/Sat/2,,https://www.megaportfest.com
+spring-scream,Spring Scream,Kenting,Taiwan,Rock;Indie,30000,4/1/Fri/3,,
+sunburn-goa,Sunburn Festival,Goa,India,Electronic,250000,12/3/Fri/3,,https://sunburn.in
+nh7-weekender,NH7 Weekender,Pune,India,Indie;Rock;Electronic;Hip-Hop,60000,12/1/Fri/3,,https://nh7.in
+lollapalooza-india,Lollapalooza India,Mumbai,India,Pop;Rock;Hip-Hop;Electronic,120000,1/4/Sat/2,,https://www.lollapaloozain.com
+zomaland,Zomaland,Various,India,Pop;Hip-Hop,150000,11/3/Sat/2,,
+magnetic-fields,Magnetic Fields Festival,Alsisar,India,Electronic;Arts,4000,12/2/Fri/3,,https://magneticfields.in
+ziro,Ziro Festival of Music,Ziro,India,Indie;Folk;World,10000,9/L/Thu/4,,https://zirofestival.com
+hornbill,Hornbill Festival,Kisama,India,World;Folk;Rock;Arts,250000,F/12-01/10,,https://hornbillfestival.com
+kochi-biennale,Kochi-Muziris Biennale,Kochi,India,Arts,600000,F/12-12/110,odd,https://www.kochimuzirisbiennale.org
+jaipur-literature,Jaipur Literature Festival,Jaipur,India,Arts,400000,1/L/Thu/5,,https://jaipurliteraturefestival.org
+india-art-fair,India Art Fair,New Delhi,India,Arts,110000,2/1/Thu/4,,https://indiaartfair.in
+rajasthan-folk,Jodhpur RIFF,Jodhpur,India,Folk;World,15000,10/3/Thu/5,,https://jodhpurriff.org
+supersonic-india,Supersonic,Pune,India,Electronic,60000,2/3/Fri/3,,
+djakarta-warehouse,Djakarta Warehouse Project,Jakarta,Indonesia,Electronic,90000,12/2/Fri/3,,https://djakartawarehouse.com
+java-jazz,Java Jazz Festival,Jakarta,Indonesia,Jazz;R&B/Soul;Pop,110000,5/L/Fri/3,,https://javajazzfestival.com
+soundrenaline,Soundrenaline,Various,Indonesia,Rock;Pop,60000,9/1/Sat/2,,
+we-the-fest,We The Fest,Jakarta,Indonesia,Pop;Indie;Hip-Hop,80000,7/3/Fri/3,,https://wethefest.com
+pestapora,Pestapora,Jakarta,Indonesia,Pop;Rock;Indie,100000,9/4/Fri/3,,
+ultra-bali,Ultra Bali,Bali,Indonesia,Electronic,20000,9/3/Fri/2,,
+wonderfruit,Wonderfruit,Pattaya,Thailand,Electronic;World;Arts,25000,12/2/Thu/5,,https://wonderfruit.co
+edc-thailand,EDC Thailand,Phuket,Thailand,Electronic,60000,1/2/Fri/3,,
+s2o-songkran,S2O Songkran Music Festival,Bangkok,Thailand,Electronic,60000,F/04-13/3,,https://s2ofestival.com
+rolling-loud-thailand,Rolling Loud Thailand,Pattaya,Thailand,Hip-Hop,50000,4/1/Fri/3,,https://www.rollingloud.com
+full-moon-party,Full Moon Party,Ko Pha-ngan,Thailand,Electronic,30000,1/2/Sat/1,,
+zoukout,ZoukOut,Singapore,Singapore,Electronic,40000,12/2/Fri/2,,https://zoukout.com
+singapore-grand-prix-concerts,Singapore Grand Prix Season Concerts,Singapore,Singapore,Pop;Rock,250000,10/1/Fri/3,,
+good-vibes-malaysia,Good Vibes Festival,Genting,Malaysia,Indie;Pop;Hip-Hop,30000,7/4/Sat/2,,https://goodvibesfestival.asia
+rainforest-world,Rainforest World Music Festival,Kuching,Malaysia,World;Folk,20000,6/3/Fri/3,,https://rwmf.net
+wanderland-ph,Wanderland Music and Arts Festival,Manila,Philippines,Indie;Pop;Arts,25000,3/1/Sat/2,,https://www.wanderland.ph
+hai-phong-ravolution,Ravolution Music Festival,Ho Chi Minh City,Vietnam,Electronic,40000,12/2/Sat/2,,
+splendour-in-the-grass,Splendour in the Grass,Byron Bay,Australia,Indie;Rock;Hip-Hop;Pop,50000,7/3/Fri/3,,https://splendourinthegrass.com
+laneway,Laneway Festival,Various,Australia,Indie;Pop;Electronic,60000,2/1/Fri/10,,https://lanewayfestival.com
+falls-festival,Falls Festival,Various,Australia,Indie;Rock;Pop,60000,F/12-29/4,,https://fallsfestival.com
+listen-out,Listen Out,Various,Australia,Hip-Hop;Electronic,80000,9/L/Fri/10,,https://listenout.com.au
+beyond-the-valley,Beyond The Valley,Phillip Island,Australia,Electronic;Hip-Hop;Pop,40000,F/12-28/4,,https://beyondthevalley.com.au
+field-day-sydney,Field Day Sydney,Sydney,Australia,Electronic;Hip-Hop,40000,F/01-01/1,,https://fieldday.com.au
+bluesfest-byron,Byron Bay Bluesfest,Byron Bay,Australia,Blues;Rock;Folk;R&B/Soul,105000,4/1/Thu/5,,https://www.bluesfest.com.au
+woodford-folk,Woodford Folk Festival,Woodford,Australia,Folk;World;Arts,120000,F/12-27/6,,https://woodfordfolkfestival.com
+meredith,Meredith Music Festival,Meredith,Australia,Indie;Rock;Electronic,13000,12/2/Fri/3,,https://mmf.com.au
+golden-plains,Golden Plains,Meredith,Australia,Indie;Rock;Electronic,13000,3/2/Sat/3,,https://goldenplains.com.au
+rainbow-serpent,Rainbow Serpent Festival,Lexton,Australia,Electronic;Arts,15000,1/L/Fri/4,,https://www.rainbowserpent.net
+pitch-music-arts,Pitch Music and Arts,Moyston,Australia,Electronic,15000,3/2/Fri/4,,https://pitchmusicandarts.com
+vivid-sydney,Vivid Sydney,Sydney,Australia,Arts;Electronic;Pop,3000000,5/4/Fri/23,,https://www.vividsydney.com
+dark-mofo,Dark Mofo,Hobart,Australia,Arts;Metal;Electronic,300000,6/2/Thu/11,,https://darkmofo.net.au
+womadelaide,WOMADelaide,Adelaide,Australia,World;Folk;Afro,95000,3/1/Fri/4,,https://www.womadelaide.com.au
+adelaide-fringe,Adelaide Fringe,Adelaide,Australia,Arts,4000000,2/3/Fri/31,,https://adelaidefringe.com.au
+adelaide-festival,Adelaide Festival,Adelaide,Australia,Arts;Classical,500000,2/L/Fri/17,,https://www.adelaidefestival.com.au
+sydney-festival,Sydney Festival,Sydney,Australia,Arts,500000,1/1/Wed/26,,https://www.sydneyfestival.org.au
+sydney-biennale,Biennale of Sydney,Sydney,Australia,Arts,700000,3/2/Sat/86,even,https://www.biennaleofsydney.art
+port-fairy-folk,Port Fairy Folk Festival,Port Fairy,Australia,Folk,40000,3/2/Fri/4,,https://portfairyfolkfestival.com
+tamworth-country,Tamworth Country Music Festival,Tamworth,Australia,Country,300000,1/3/Fri/10,,https://www.tcmf.com.au
+good-things,Good Things Festival,Various,Australia,Rock;Metal;Punk,90000,12/1/Fri/3,,https://goodthingsfestival.com.au
+spilt-milk,Spilt Milk,Various,Australia,Pop;Hip-Hop;Electronic,80000,11/L/Sat/8,,
+rhythm-and-vines,Rhythm and Vines,Gisborne,New Zealand,Electronic;Hip-Hop;Pop,25000,F/12-29/3,,https://www.rhythmandvines.co.nz
+northern-bass,Northern Bass,Mangawhai,New Zealand,Electronic,15000,F/12-29/3,,
+splore,Splore,Tapapakanga,New Zealand,Electronic;Indie;Arts,8000,2/3/Fri/3,,https://www.splore.net
+womad-nz,WOMAD New Zealand,New Plymouth,New Zealand,World;Folk,30000,3/3/Fri/3,,https://www.womad.co.nz
+nz-festival,Aotearoa New Zealand Festival of the Arts,Wellington,New Zealand,Arts,100000,2/L/Fri/24,,https://www.festival.nz

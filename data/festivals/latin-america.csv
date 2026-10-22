@@ -1,0 +1,57 @@
+id,name,city,country,genres,attendance,pattern,years,website
+rock-in-rio,Rock in Rio,Rio de Janeiro,Brazil,Rock;Pop;Metal,700000,9/2/Fri/3+7,even,https://rockinrio.com
+the-town,The Town,São Paulo,Brazil,Pop;Rock;Hip-Hop,500000,9/1/Sat/2+5,odd,https://thetown.com.br
+lollapalooza-brasil,Lollapalooza Brasil,São Paulo,Brazil,Pop;Rock;Hip-Hop;Electronic,240000,3/L/Fri/3,,https://www.lollapaloozabr.com
+tomorrowland-brasil,Tomorrowland Brasil,Itu,Brazil,Electronic,180000,10/2/Fri/3,,https://www.tomorrowland.com
+primavera-sound-sao-paulo,Primavera Sound São Paulo,São Paulo,Brazil,Indie;Pop;Rock,100000,11/L/Sat/2,,https://www.primaverasound.com
+rio-carnival,Rio Carnival,Rio de Janeiro,Brazil,Latin;World;Arts,7000000,2/2/Fri/6,,https://www.rio-carnival.net
+salvador-carnival,Salvador Carnival,Salvador,Brazil,Latin;World;Afro,2000000,2/2/Thu/7,,
+sao-paulo-biennial,São Paulo Biennial,São Paulo,Brazil,Arts,800000,9/1/Sat/100,odd,https://www.bienal.org.br
+mita-festival,MITA Festival,Rio de Janeiro,Brazil,Pop;Indie,80000,5/4/Sat/2,,
+universo-paralello,Universo Paralello,Pratigi,Brazil,Electronic;Arts,25000,F/12-27/8,even,https://universoparalello.org
+c6-fest,C6 Fest,São Paulo,Brazil,Jazz;Indie;Electronic,40000,5/3/Thu/4,,https://c6fest.com.br
+lollapalooza-chile,Lollapalooza Chile,Santiago,Chile,Pop;Rock;Hip-Hop;Electronic,240000,3/3/Fri/3,,https://www.lollapaloozacl.com
+fauna-primavera,Fauna Primavera,Santiago,Chile,Indie;Electronic,50000,11/2/Fri/2,,
+creamfields-chile,Creamfields Chile,Santiago,Chile,Electronic,50000,11/2/Sat/1,,
+vina-del-mar,Festival Internacional de la Canción de Viña del Mar,Viña del Mar,Chile,Pop;Latin,90000,2/4/Sun/6,,
+lollapalooza-argentina,Lollapalooza Argentina,Buenos Aires,Argentina,Pop;Rock;Hip-Hop;Electronic,300000,3/3/Fri/3,,https://www.lollapaloozaar.com
+cosquin-rock,Cosquín Rock,Santa María de Punilla,Argentina,Rock,100000,2/2/Sat/2,,https://cosquinrock.net
+quilmes-rock,Quilmes Rock,Buenos Aires,Argentina,Rock,80000,4/1/Sat/2,,
+creamfields-buenos-aires,Creamfields Buenos Aires,Buenos Aires,Argentina,Electronic,50000,11/2/Sat/1,,
+primavera-sound-buenos-aires,Primavera Sound Buenos Aires,Buenos Aires,Argentina,Indie;Pop;Rock,90000,11/3/Sat/2,,https://www.primaverasound.com
+cosquin-folklore,Festival Nacional de Folklore de Cosquín,Cosquín,Argentina,Folk;Latin,150000,1/3/Sat/9,,
+estereo-picnic,Festival Estéreo Picnic,Bogotá,Colombia,Pop;Rock;Electronic;Latin,250000,3/4/Thu/4,,https://www.festivalestereopicnic.com
+rock-al-parque,Rock al Parque,Bogotá,Colombia,Rock;Metal;Punk,300000,11/1/Sat/3,,https://rockalparque.gov.co
+barranquilla-carnival,Carnaval de Barranquilla,Barranquilla,Colombia,Latin;World;Arts,2000000,2/2/Sat/4,,https://www.carnavaldebarranquilla.org
+petronio-alvarez,Festival Petronio Álvarez,Cali,Colombia,Afro;Latin;World,500000,8/2/Wed/6,,
+baum-festival,Baum Festival,Bogotá,Colombia,Electronic,40000,10/1/Sat/2,,https://baumfestival.com
+vive-latino,Vive Latino,Mexico City,Mexico,Rock;Latin;Pop,160000,3/2/Sat/2,,https://www.vivelatino.com.mx
+corona-capital,Corona Capital,Mexico City,Mexico,Indie;Rock;Pop,240000,11/3/Fri/3,,https://www.coronacapital.com.mx
+edc-mexico,EDC Mexico,Mexico City,Mexico,Electronic,250000,2/L/Fri/3,,https://mexico.electricdaisycarnival.com
+pa-l-norte,Pa'l Norte,Monterrey,Mexico,Rock;Pop;Latin;Hip-Hop,240000,4/1/Fri/3,,https://palnorte.com.mx
+flow-fest,Flow Fest,Mexico City,Mexico,Latin;Hip-Hop,140000,11/L/Sat/2,,https://flowfest.mx
+tecate-comuna,Tecate Comuna,Puebla,Mexico,Rock;Pop;Latin,70000,5/1/Sat/1,,
+bahidora,Bahidorá,Las Estacas,Mexico,Electronic;World,15000,2/2/Fri/3,,https://bahidora.com
+day-zero,Day Zero,Tulum,Mexico,Electronic,10000,1/2/Sat/1,,
+bpm-festival,BPM Festival,Playa del Carmen,Mexico,Electronic,40000,1/1/Fri/10,,
+cumbre-tajin,Cumbre Tajín,Papantla,Mexico,World;Latin;Arts,300000,3/3/Wed/5,,https://cumbretajin.com
+cervantino,Festival Internacional Cervantino,Guanajuato,Mexico,Arts;Classical;World,400000,10/2/Fri/17,,https://www.festivalcervantino.gob.mx
+zona-maco,Zona Maco,Mexico City,Mexico,Arts,80000,2/1/Wed/5,,https://zonamaco.com
+baja-beach-fest,Baja Beach Fest,Rosarito,Mexico,Latin,60000,8/2/Fri/3,,https://bajabeachfest.com
+axe-ceremonia,AXE Ceremonia,Mexico City,Mexico,Hip-Hop;Indie;Electronic,80000,4/1/Sat/2,,
+hell-and-heaven,Hell and Heaven Metal Fest,Mexico City,Mexico,Metal,90000,3/1/Fri/3,,
+festival-arre,Festival Arre,Mexico City,Mexico,Latin;Country,80000,9/1/Sat/2,,
+vivo-x-el-rock,Vivo X El Rock,Lima,Peru,Rock;Latin,80000,11/2/Sat/2,,
+inti-raymi,Inti Raymi,Cusco,Peru,World;Folk;Arts,100000,F/06-24/1,,
+quito-fest,Quito Fest,Quito,Ecuador,Rock;Metal,50000,8/2/Sat/2,,
+montevideo-rock,Montevideo Rock,Montevideo,Uruguay,Rock,40000,3/1/Sat/2,,
+asuncionico,Asunciónico,Asunción,Paraguay,Rock;Pop,50000,3/L/Tue/2,,
+trinidad-carnival,Trinidad and Tobago Carnival,Port of Spain,Trinidad and Tobago,World;Latin;Arts,500000,2/2/Mon/2,,https://www.ncctt.org
+reggae-sumfest,Reggae Sumfest,Montego Bay,Jamaica,Reggae,30000,7/3/Sun/7,,https://reggaesumfest.com
+rebel-salute,Rebel Salute,St. Ann,Jamaica,Reggae,25000,1/3/Fri/2,,
+crop-over,Crop Over Festival,Bridgetown,Barbados,World;Latin,300000,8/1/Mon/1,,
+st-lucia-jazz,Saint Lucia Jazz and Arts Festival,Castries,Saint Lucia,Jazz;R&B/Soul,30000,5/1/Wed/5,,
+havana-jazz,Jazz Plaza Havana,Havana,Cuba,Jazz;Latin,30000,1/3/Sun/6,,
+puerto-rico-heineken-jazz,Heineken JazzFest Puerto Rico,San Juan,Puerto Rico,Jazz;Latin,20000,9/2/Fri/3,,
+festival-presidente,Festival Presidente,Santo Domingo,Dominican Republic,Latin;Pop,100000,10/4/Thu/3,,
+envision,Envision Festival,Uvita,Costa Rica,Electronic;World;Arts,8000,2/L/Mon/6,,https://envisionfestival.com

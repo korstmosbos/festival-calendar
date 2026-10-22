@@ -1,0 +1,40 @@
+id,name,city,country,genres,attendance,pattern,years,website
+afropunk-joburg,Afropunk Johannesburg,Johannesburg,South Africa,Afro;Hip-Hop;R&B/Soul,30000,F/12-30/2,,https://afropunk.com
+rocking-the-daisies,Rocking the Daisies,Cape Town,South Africa,Indie;Hip-Hop;Electronic,25000,10/1/Thu/4,,https://rockingthedaisies.com
+cape-town-jazz,Cape Town International Jazz Festival,Cape Town,South Africa,Jazz;Afro;R&B/Soul,37000,3/L/Fri/2,,https://www.capetownjazzfest.com
+joy-of-jazz,Standard Bank Joy of Jazz,Johannesburg,South Africa,Jazz,25000,9/L/Thu/3,,https://joyofjazz.co.za
+afrikaburn,AfrikaBurn,Tankwa Karoo,South Africa,Arts;Electronic,13000,4/L/Mon/7,,https://www.afrikaburn.org
+national-arts-festival,National Arts Festival,Makhanda,South Africa,Arts;Jazz,200000,6/L/Thu/11,,https://www.nationalartsfestival.co.za
+mieliepop,Mieliepop,Lothair,South Africa,Indie;Electronic;Folk,5000,3/1/Fri/3,,
+dstv-delicious,DStv Delicious Festival,Johannesburg,South Africa,R&B/Soul;Hip-Hop;Jazz,60000,9/L/Sat/2,,
+cotton-fest,Cotton Fest,Johannesburg,South Africa,Hip-Hop,20000,9/1/Sat/1,,
+investec-cape-town-art-fair,Investec Cape Town Art Fair,Cape Town,South Africa,Arts,25000,2/3/Fri/3,,https://www.investeccapetownartfair.co.za
+afro-nation-ghana,Afro Nation Ghana,Accra,Ghana,Afro;Hip-Hop,30000,F/12-28/3,,https://www.afronation.com
+afrofuture,AfroFuture,Accra,Ghana,Afro;Hip-Hop,30000,F/12-28/2,,https://afrofuture.com
+chale-wote,Chale Wote Street Art Festival,Accra,Ghana,Arts;Afro,50000,8/3/Sat/7,,
+flytime-fest,Flytime Fest,Lagos,Nigeria,Afro;Hip-Hop,40000,F/12-20/7,,
+lagos-jazz,Lagos International Jazz Festival,Lagos,Nigeria,Jazz;Afro,20000,4/L/Thu/4,,
+art-x-lagos,ART X Lagos,Lagos,Nigeria,Arts,15000,11/1/Thu/4,,https://artxlagos.com
+felabration,Felabration,Lagos,Nigeria,Afro,50000,F/10-13/7,,
+lake-of-stars,Lake of Stars,Mangochi,Malawi,Afro;World;Electronic,4000,9/L/Fri/3,,https://lakeofstars.org
+sauti-za-busara,Sauti za Busara,Stone Town,Tanzania,Afro;World,20000,2/2/Fri/3,,https://www.busaramusic.org
+nyege-nyege,Nyege Nyege Festival,Jinja,Uganda,Electronic;Afro,12000,11/2/Thu/4,,https://nyegenyege.com
+bayimba,Bayimba International Festival,Kampala,Uganda,Afro;Arts,15000,9/3/Fri/3,,
+blankets-and-wine-nairobi,Blankets and Wine,Nairobi,Kenya,Afro;R&B/Soul,8000,12/1/Sun/1,,
+koroga,Koroga Festival,Nairobi,Kenya,Afro;Jazz,10000,4/L/Sun/1,,
+safaricom-jazz,Safaricom Jazz Festival,Nairobi,Kenya,Jazz,10000,2/3/Sun/1,,
+mawazine,Mawazine,Rabat,Morocco,Pop;World;Hip-Hop;Latin,2500000,6/3/Fri/8,,https://www.festivalmawazine.ma
+gnaoua,Gnaoua World Music Festival,Essaouira,Morocco,World;Afro;Jazz,300000,6/4/Thu/3,,https://www.festival-gnaoua.net
+oasis-festival,Oasis Festival,Marrakech,Morocco,Electronic,8000,9/2/Fri/3,,https://theoasisfest.com
+fes-sacred-music,Fes Festival of World Sacred Music,Fes,Morocco,World;Classical,50000,5/L/Fri/9,,
+1-54-marrakech,1-54 Contemporary African Art Fair Marrakech,Marrakech,Morocco,Arts,10000,2/1/Thu/4,,https://www.1-54.com
+sandbox-egypt,Sandbox Festival,El Gouna,Egypt,Electronic,6000,5/L/Thu/4,,
+cairo-jazz,Cairo Jazz Festival,Cairo,Egypt,Jazz,15000,10/L/Thu/4,,
+carthage-festival,Carthage International Festival,Carthage,Tunisia,Pop;World;Arts,150000,7/2/Sat/35,,
+dakar-biennale,Dak'Art Biennale,Dakar,Senegal,Arts,100000,5/2/Thu/30,even,https://biennaledakar.org
+saint-louis-jazz,Saint-Louis Jazz Festival,Saint-Louis,Senegal,Jazz,30000,5/L/Thu/4,,
+femua,FEMUA,Abidjan,Côte d'Ivoire,Afro,100000,4/L/Tue/6,,
+masa-abidjan,MASA Abidjan,Abidjan,Côte d'Ivoire,Afro;Arts,40000,4/2/Sat/8,even,
+azgo,AZGO Festival,Maputo,Mozambique,Afro;World,20000,5/L/Fri/2,,
+harare-international,Harare International Festival of the Arts,Harare,Zimbabwe,Arts;Afro,40000,4/L/Tue/6,,
+victoria-falls-carnival,Victoria Falls Carnival,Victoria Falls,Zimbabwe,Afro;Electronic,6000,F/12-29/3,,

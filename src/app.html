@@ -1,0 +1,377 @@
+<title>Festival Circuit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: filter rail on the left, a "running order" list or month grid on the right, subscribe drawer from the right edge. */
+:root{
+  --bg:#f2f1f6; --surface:#ffffff; --sunk:#e8e6ef; --line:#d6d3e0;
+  --ink:#1c1a2b; --muted:#625e78; --accent:#d93a63; --accent-ink:#ffffff; --accent-soft:#fbe3ea;
+  --ok:#1f7a55; --ok-soft:#dcf1e7; --tbc:#8a5a00; --tbc-soft:#fbefd6;
+  --r-na:#2f6fdb; --r-eu:#7a4fd6; --r-ap:#11898a; --r-la:#e0662b; --r-af:#b58a00;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#13121c; --surface:#1c1a28; --sunk:#252335; --line:#34314a;
+  --ink:#eeecf7; --muted:#a29ebb; --accent:#ff6b8f; --accent-ink:#1a0710; --accent-soft:#3a1a26;
+  --ok:#5fd3a0; --ok-soft:#173327; --tbc:#f3c063; --tbc-soft:#3a2d12;
+  --r-na:#6fa2ff; --r-eu:#ad8bff; --r-ap:#3fc9c9; --r-la:#ff9a62; --r-af:#e6c040; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13121c; --surface:#1c1a28; --sunk:#252335; --line:#34314a;
+  --ink:#eeecf7; --muted:#a29ebb; --accent:#ff6b8f; --accent-ink:#1a0710; --accent-soft:#3a1a26;
+  --ok:#5fd3a0; --ok-soft:#173327; --tbc:#f3c063; --tbc-soft:#3a2d12;
+  --r-na:#6fa2ff; --r-eu:#ad8bff; --r-ap:#3fc9c9; --r-la:#ff9a62; --r-af:#e6c040; color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{color:var(--ink);font:15px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a{color:inherit}
+.wrap{max-width:1280px;margin:0 auto;padding-block:20px 48px}
+
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;padding-block:8px 20px;border-bottom:2px solid var(--ink)}
+h1{font:800 clamp(30px,5vw,52px)/0.95 var(--display);letter-spacing:-0.02em;margin:0;text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{color:var(--muted);margin:6px 0 0;max-width:62ch}
+.top-actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:1.5px solid var(--ink);background:var(--surface);border-radius:999px;padding:8px 16px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;white-space:nowrap}
+.btn:hover{background:var(--sunk)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.small{padding:5px 12px;font-size:13px}
+
+.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px;margin-top:20px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}}
+
+aside.filters{display:flex;flex-direction:column;gap:22px;align-self:start;position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);max-height:calc(100vh - 24px);overflow:auto;padding-right:4px}
+@media (max-width:900px){aside.filters{position:static;max-height:none;overflow:visible}
+  aside.filters:not(.open) .fgroup{display:none}}
+.ftoggle{display:none}
+@media (max-width:900px){.ftoggle{display:inline-flex}}
+.fgroup h3{font:600 11px/1 var(--body);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 10px;display:flex;justify-content:space-between;align-items:center}
+.fgroup h3 button{border:0;background:none;color:var(--accent);font-size:11px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 11px;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip:hover{border-color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--rc,var(--muted))}
+.chip .n{font:400 11px var(--mono);opacity:.65}
+input[type=search],select{width:100%;border:1.5px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px}
+.countries{max-height:240px;overflow:auto;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);margin-top:8px}
+.countries label{display:flex;align-items:center;gap:8px;padding:5px 10px;font-size:13.5px;cursor:pointer}
+.countries label:hover{background:var(--sunk)}
+.countries label .n{margin-left:auto;font:11px var(--mono);color:var(--muted)}
+.countries .rhead{font:600 10.5px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:8px 10px 2px;position:sticky;top:0;background:var(--surface)}
+.switch{display:flex;align-items:center;gap:10px;font-size:14px;cursor:pointer}
+.switch input{accent-color:var(--accent);width:16px;height:16px}
+
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.tabs{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden}
+.tabs button{border:0;background:var(--surface);padding:7px 16px;font-weight:600;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.count{font:13px var(--mono);color:var(--muted)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+
+/* Running-order list */
+.month{margin-bottom:26px}
+.month h2{font:700 22px/1 var(--display);margin:0 0 8px;display:flex;align-items:baseline;gap:10px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:10px 8px;z-index:2}
+.month h2 small{font:400 12px var(--mono);color:var(--muted)}
+.row{display:grid;grid-template-columns:118px minmax(0,1fr) auto;gap:6px 16px;align-items:center;padding:12px 14px 12px 12px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--rc);border-radius:4px 10px 10px 4px;margin-bottom:6px;cursor:pointer}
+.row:hover{border-color:var(--muted);border-left-color:var(--rc)}
+.row .when{font:600 13px/1.25 var(--mono);font-variant-numeric:tabular-nums}
+.row .when small{display:block;font-weight:400;color:var(--muted);font-size:11.5px}
+.row .name{font:700 17px/1.2 var(--display);min-width:0}
+.row .where{color:var(--muted);font-size:13.5px}
+.row .meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
+.tag{font-size:11.5px;padding:1px 8px;border-radius:999px;background:var(--sunk);color:var(--muted)}
+.pill{font:600 10.5px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:999px;white-space:nowrap}
+.pill.confirmed{background:var(--ok-soft);color:var(--ok)}
+.pill.projected{background:var(--tbc-soft);color:var(--tbc)}
+.pill.cancelled{background:var(--accent-soft);color:var(--accent)}
+.meter{display:inline-flex;gap:2px;align-items:flex-end;height:14px}
+.meter i{width:4px;background:var(--line);border-radius:1px}
+.meter i.on{background:var(--ink)}
+.meter i:nth-child(1){height:5px}.meter i:nth-child(2){height:7px}.meter i:nth-child(3){height:9px}.meter i:nth-child(4){height:11px}.meter i:nth-child(5){height:14px}
+.sizecell{display:flex;align-items:center;gap:6px;font:11.5px var(--mono);color:var(--muted);white-space:nowrap}
+.detail{grid-column:1/-1;border-top:1px dashed var(--line);margin-top:8px;padding-top:10px;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13.5px;color:var(--muted);cursor:auto}
+.detail a{color:var(--accent);font-weight:600}
+@media (max-width:620px){
+  .row{grid-template-columns:minmax(0,1fr) auto}
+  .row .when{grid-column:1/-1;display:flex;gap:8px;align-items:baseline}
+  .row .when small{display:inline}
+}
+.empty{padding:40px 20px;text-align:center;color:var(--muted);border:1.5px dashed var(--line);border-radius:12px}
+
+/* Month grid */
+.mhead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.mhead h2{font:700 24px/1 var(--display);margin:0;min-width:200px}
+.longrun{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;font-size:12.5px;color:var(--muted);align-items:center}
+.gridwrap{overflow-x:auto}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(96px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);min-width:680px}
+.grid .dow{font:600 11px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:6px 8px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--sunk)}
+.cell{min-height:112px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:4px;background:var(--surface);display:flex;flex-direction:column;gap:2px;min-width:0}
+.cell.out{background:var(--sunk);opacity:.6}
+.cell .d{font:600 12px var(--mono);color:var(--muted);padding:2px 4px}
+.cell.today .d{color:var(--accent)}
+.ev{font-size:11.5px;line-height:1.25;padding:2px 6px;border-radius:4px;background:color-mix(in srgb,var(--rc) 16%,transparent);border-left:3px solid var(--rc);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;border-top:0;border-right:0;border-bottom:0;text-align:left;color:inherit}
+.ev.tbc{background:transparent;border:1px dashed var(--rc);border-left:3px solid var(--rc)}
+.more{font-size:11px;color:var(--muted);padding:0 6px;border:0;background:none;text-align:left;cursor:pointer}
+
+/* Subscribe drawer */
+.scrim{position:fixed;inset:0;background:rgba(10,8,20,.45);z-index:20}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--surface);z-index:21;overflow:auto;border-left:2px solid var(--ink);
+  padding:calc(env(safe-area-inset-top,0px) + 22px) max(22px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 22px) 22px;display:flex;flex-direction:column;gap:18px}
+.drawer h2{font:800 28px/1 var(--display);margin:0}
+.drawer .close{position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);right:max(14px,env(safe-area-inset-right,0px));border:0;background:var(--sunk);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px}
+.feedcard{border:1.5px solid var(--ink);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.feedcard .fname{font:700 18px var(--display)}
+.url{display:flex;gap:6px}
+.url input{font:12px var(--mono);border:1.5px solid var(--line);border-radius:8px;padding:8px;flex:1;min-width:0;background:var(--surface)}
+.steps{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:14px}
+.steps b{color:var(--ink)}
+.drawer h3{font:600 11px var(--body);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:4px 0 -6px}
+.note{font-size:13px;color:var(--muted);background:var(--sunk);border-radius:10px;padding:10px 12px}
+.pick{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:999px;font-size:14px;z-index:30}
+@media (prefers-reduced-motion:no-preference){.drawer{animation:slide .22s ease-out}@keyframes slide{from{transform:translateX(30px);opacity:.4}}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Festival <em>Circuit</em></h1>
+      <p class="sub" id="sub">Music and art festivals across five regions.</p>
+    </div>
+    <div class="top-actions">
+      <a class="btn" id="suggest" target="_blank" rel="noopener" hidden>Add or correct a festival</a>
+      <button class="btn primary" id="openSub" type="button">Subscribe to calendar</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="filters" id="filters">
+      <button class="btn ftoggle" id="ftoggle" type="button" aria-expanded="false">Filters</button>
+      <div class="fgroup"><h3>Search</h3><input type="search" id="q" placeholder="Festival, city or country"></div>
+      <div class="fgroup"><h3>Region <button type="button" data-clear="regions">Clear</button></h3><div class="chips" id="regions"></div></div>
+      <div class="fgroup"><h3>Country <button type="button" data-clear="countries">Clear</button></h3>
+        <input type="search" id="cq" placeholder="Find a country">
+        <div class="countries" id="countries"></div></div>
+      <div class="fgroup"><h3>Genre <button type="button" data-clear="genres">Clear</button></h3><div class="chips" id="genres"></div></div>
+      <div class="fgroup"><h3>Size · typical attendance <button type="button" data-clear="sizes">Clear</button></h3><div class="chips" id="sizes"></div></div>
+      <div class="fgroup"><h3>Dates</h3>
+        <label class="switch"><input type="checkbox" id="confirmedOnly"> Confirmed dates only</label>
+      </div>
+    </aside>
+
+    <main>
+      <div class="bar">
+        <div class="tabs" role="tablist">
+          <button role="tab" id="tab-list" aria-selected="true" type="button">List</button>
+          <button role="tab" id="tab-month" aria-selected="false" type="button">Month</button>
+        </div>
+        <span class="count" id="count"></span>
+        <div class="legend"><span><span class="pill confirmed">Confirmed</span> announced dates</span><span><span class="pill projected">Dates TBC</span> projected from usual timing</span></div>
+      </div>
+      <div id="view"></div>
+    </main>
+  </div>
+</div>
+
+<div id="subUI" hidden>
+  <div class="scrim" id="scrim"></div>
+  <div class="drawer" role="dialog" aria-modal="true" aria-labelledby="subTitle">
+    <button class="close" id="closeSub" type="button" aria-label="Close">×</button>
+    <h2 id="subTitle">Subscribe</h2>
+    <p class="note" style="margin:0">A subscription stays in sync: when festival dates are confirmed or details change, the events update in your calendar on their own. Google refreshes subscribed calendars every 12–24 hours.</p>
+    <div class="feedcard">
+      <span class="count" id="feedHint">Matches your current filters</span>
+      <span class="fname" id="feedName"></span>
+      <span class="count" id="feedCount"></span>
+      <div class="url"><input id="feedUrl" readonly aria-label="Calendar feed address"><button class="btn small" id="copy" type="button">Copy</button></div>
+      <div class="top-actions"><a class="btn small primary" id="gcal" target="_blank" rel="noopener">Add to Google Calendar</a><a class="btn small" id="webcal">Open in Apple / Outlook</a></div>
+      <p class="note" id="notLive" hidden style="margin:0">The feed address goes live once the site is published on GitHub Pages.</p>
+    </div>
+    <h3>Or pick another calendar</h3>
+    <div class="pick">
+      <select id="pickKind" aria-label="Feed type"><option value="all">Everything</option><option value="region">By region</option><option value="country">By country</option><option value="genre">By genre</option><option value="size">By size</option><option value="region-genre">Region + genre</option></select>
+      <select id="pickKey" aria-label="Feed"></select>
+    </div>
+    <h3>Google Calendar (Gmail)</h3>
+    <ol class="steps"><li>Click <b>Add to Google Calendar</b> above and confirm, or</li><li>In Google Calendar, next to <b>Other calendars</b> click <b>+</b> → <b>From URL</b>, paste the address, then <b>Add calendar</b>.</li></ol>
+    <h3>Zoho Calendar</h3>
+    <ol class="steps"><li>Copy the address above.</li><li>In Zoho Calendar, click <b>+</b> next to <b>Subscribed Calendars</b> → <b>Subscribe by URL</b>.</li><li>Paste the address, name it, and click <b>Subscribe</b>.</li></ol>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const RC={"North America":"var(--r-na)","Europe":"var(--r-eu)","Asia-Pacific":"var(--r-ap)","Latin America":"var(--r-la)","Africa":"var(--r-af)"};
+const SIZE_ORDER=["boutique","mid","large","major","mega"];
+const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const MS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const S={regions:new Set(),countries:new Set(),genres:new Set(),sizes:new Set(),q:"",cq:"",confirmedOnly:false,view:"list",month:null,open:null};
+let D,F,byId;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pd=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const todayISO=iso(new Date());
+
+function fmtRange(a,b){const s=pd(a),e=pd(b);
+  if(a===b)return `${MS[s.getMonth()]} ${s.getDate()}`;
+  if(s.getMonth()===e.getMonth()&&s.getFullYear()===e.getFullYear())return `${MS[s.getMonth()]} ${s.getDate()}–${e.getDate()}`;
+  return `${MS[s.getMonth()]} ${s.getDate()} – ${MS[e.getMonth()]} ${e.getDate()}`+(s.getFullYear()!==e.getFullYear()?` ${e.getFullYear()}`:"")}
+const days=(a,b)=>Math.round((pd(b)-pd(a))/864e5)+1;
+
+function load(){
+  try{const saved=JSON.parse(localStorage.getItem("fc-filters")||"null");
+    if(saved){for(const k of["regions","countries","genres","sizes"])S[k]=new Set(saved[k]||[]);S.confirmedOnly=!!saved.confirmedOnly;S.view=saved.view||"list"}}catch(e){}
+}
+function save(){try{localStorage.setItem("fc-filters",JSON.stringify({regions:[...S.regions],countries:[...S.countries],genres:[...S.genres],sizes:[...S.sizes],confirmedOnly:S.confirmedOnly,view:S.view}))}catch(e){}}
+
+function festMatch(f,skip){
+  if(skip!=="regions"&&S.regions.size&&!S.regions.has(f.region))return false;
+  if(skip!=="countries"&&S.countries.size&&!S.countries.has(f.country))return false;
+  if(skip!=="genres"&&S.genres.size&&!f.genres.some(g=>S.genres.has(g)))return false;
+  if(skip!=="sizes"&&S.sizes.size&&!S.sizes.has(f.size))return false;
+  if(S.q){const q=S.q.toLowerCase();if(!(f.name+" "+f.city+" "+f.country).toLowerCase().includes(q))return false}
+  return true}
+function evMatch(e){return !(S.confirmedOnly&&e.status!=="confirmed")}
+function filtered(){return D.events.filter(e=>evMatch(e)&&festMatch(byId[e.fid]))}
+
+function chip(label,on,attrs,extra=""){return `<button type="button" class="chip" aria-pressed="${on}" ${attrs}>${extra}${esc(label)}</button>`}
+function renderFilters(){
+  const cnt=(skip,pred)=>F.filter(f=>festMatch(f,skip)&&pred(f)).length;
+  $("regions").innerHTML=D.regions.map(r=>chip(r,S.regions.has(r),`data-k="regions" data-v="${esc(r)}" style="--rc:${RC[r]}"`,'<span class="dot"></span>')).join("");
+  $("genres").innerHTML=D.genres.map(g=>{const n=cnt("genres",f=>f.genres.includes(g));return n||S.genres.has(g)?chip(g,S.genres.has(g),`data-k="genres" data-v="${esc(g)}"`).replace("</button>",` <span class="n">${n}</span></button>`):""}).join("");
+  $("sizes").innerHTML=[...D.sizes].reverse().map(s=>chip(s.label,S.sizes.has(s.slug),`data-k="sizes" data-v="${s.slug}"`,meter(s.slug))).join("");
+  let h="";for(const r of D.regions){
+    if(S.regions.size&&!S.regions.has(r))continue;
+    const cs=[...new Set(F.filter(f=>f.region===r).map(f=>f.country))].sort().filter(c=>!S.cq||c.toLowerCase().includes(S.cq.toLowerCase()));
+    if(!cs.length)continue;h+=`<div class="rhead">${esc(r)}</div>`;
+    for(const c of cs){const n=F.filter(f=>f.country===c&&festMatch(f,"countries")).length;
+      h+=`<label><input type="checkbox" data-k="countries" data-v="${esc(c)}" ${S.countries.has(c)?"checked":""}> ${esc(c)} <span class="n">${n}</span></label>`}}
+  $("countries").innerHTML=h||'<div class="rhead">No countries match</div>';
+}
+function meter(size){const k=SIZE_ORDER.indexOf(size)+1;return `<span class="meter" aria-hidden="true">${[1,2,3,4,5].map(i=>`<i class="${i<=k?"on":""}"></i>`).join("")}</span>`}
+const fmtN=n=>n>=1e6?(n/1e6).toFixed(n>=1e7?0:1).replace(/\.0$/,"")+"M":n>=1e3?Math.round(n/1e3)+"k":String(n);
+function pill(st){return st==="confirmed"?'<span class="pill confirmed">Confirmed</span>':st==="cancelled"?'<span class="pill cancelled">Cancelled</span>':'<span class="pill projected">Dates TBC</span>'}
+
+function detail(e,f){
+  const src=e.source&&e.source.startsWith("http")?` · <a href="${esc(e.source)}" target="_blank" rel="noopener">source</a>`:"";
+  const sugg=D.repo?`<a href="https://github.com/${D.repo}/issues/new?template=festival.yml&title=${encodeURIComponent("Update: "+f.name)}&festival_id=${encodeURIComponent(f.id)}" target="_blank" rel="noopener">Suggest a correction</a>`:"";
+  return `<div class="detail" onclick="event.stopPropagation()">
+    <span>${e.status==="confirmed"?"Dates announced by the festival"+src:"Projected from the festival's usual timing. Will update when announced."}</span>
+    <span>Typical attendance ~${f.attendance.toLocaleString()}</span>
+    ${f.website?`<a href="${esc(f.website)}" target="_blank" rel="noopener">Official website</a>`:`<a href="https://www.google.com/search?q=${encodeURIComponent(f.name+" "+f.country+" festival dates")}" target="_blank" rel="noopener">Search for dates</a>`}
+    ${sugg}</div>`}
+
+function renderList(evs){
+  const upcoming=evs.filter(e=>e.end>=todayISO);
+  if(!upcoming.length)return '<div class="empty">No festivals match these filters. Clear a filter to see more.</div>';
+  const groups=new Map();
+  for(const e of upcoming){const s=e.start<todayISO?todayISO:e.start;const k=s.slice(0,7);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(e)}
+  let h="";
+  for(const[k,list]of[...groups].sort()){const[y,m]=k.split("-").map(Number);
+    h+=`<section class="month"><h2>${MONTHS[m-1]} ${y} <small>${list.length} festival${list.length>1?"s":""}</small></h2>`;
+    for(const e of list){const f=byId[e.fid];const id=`${e.fid}|${e.start}`;
+      h+=`<article class="row" style="--rc:${RC[f.region]}" data-open="${esc(id)}" id="${f.id}">
+        <div class="when">${fmtRange(e.start,e.end)}<small>${days(e.start,e.end)} day${days(e.start,e.end)>1?"s":""}${e.part?" · "+esc(e.part):""}</small></div>
+        <div><div class="name">${esc(f.name)}</div><div class="where">${esc([f.city,f.country].filter(Boolean).join(", "))}</div>
+          <div class="tags">${f.genres.map(g=>`<span class="tag">${esc(g)}</span>`).join("")}</div></div>
+        <div class="meta">${pill(e.status)}<span class="sizecell" title="Typical attendance">${meter(f.size)} ${fmtN(f.attendance)}</span></div>
+        ${S.open===id?detail(e,f):""}</article>`}
+    h+="</section>"}
+  return h}
+
+function renderMonth(evs){
+  if(!S.month){S.month=todayISO.slice(0,7)}
+  const[y,m]=S.month.split("-").map(Number);
+  const first=new Date(y,m-1,1),last=new Date(y,m,0);
+  const startGrid=new Date(first);startGrid.setDate(1-((first.getDay()+6)%7));
+  const mStart=iso(first),mEnd=iso(last);
+  const inMonth=evs.filter(e=>e.start<=mEnd&&e.end>=mStart);
+  const long=inMonth.filter(e=>days(e.start,e.end)>21),short=inMonth.filter(e=>days(e.start,e.end)<=21);
+  let h=`<div class="mhead"><button class="btn small" data-nav="-1" type="button" aria-label="Previous month">←</button><h2>${MONTHS[m-1]} ${y}</h2><button class="btn small" data-nav="1" type="button" aria-label="Next month">→</button><span class="count">${inMonth.length} festivals</span></div>`;
+  if(long.length)h+=`<div class="longrun"><span>Running all month:</span>${long.map(e=>`<button type="button" class="ev ${e.status!=="confirmed"?"tbc":""}" style="--rc:${RC[byId[e.fid].region]}" data-goto="${e.fid}">${esc(byId[e.fid].name)}</button>`).join("")}</div>`;
+  h+='<div class="gridwrap"><div class="grid">'+["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(d=>`<div class="dow">${d}</div>`).join("");
+  const d=new Date(startGrid);
+  for(let i=0;i<42;i++){const di=iso(d);const out=d.getMonth()!==m-1;
+    const todays=short.filter(e=>e.start<=di&&e.end>=di).sort((a,b)=>byId[b.fid].attendance-byId[a.fid].attendance);
+    h+=`<div class="cell ${out?"out":""} ${di===todayISO?"today":""}"><span class="d">${d.getDate()}</span>`;
+    if(!out){todays.slice(0,4).forEach(e=>{const f=byId[e.fid];h+=`<button type="button" class="ev ${e.status!=="confirmed"?"tbc":""}" style="--rc:${RC[f.region]}" title="${esc(f.name)} · ${esc(f.country)} · ${fmtRange(e.start,e.end)}" data-goto="${f.id}">${esc(f.name)}</button>`});
+      if(todays.length>4)h+=`<button type="button" class="more" data-day="${di}">+${todays.length-4} more</button>`}
+    h+="</div>";d.setDate(d.getDate()+1);if(i>=34&&d.getMonth()!==m-1&&d.getDay()===1)break}
+  return h+"</div></div>"}
+
+function render(){
+  renderFilters();
+  const evs=filtered();
+  const nF=new Set(evs.filter(e=>e.end>=todayISO).map(e=>e.fid)).size;
+  $("count").textContent=`${nF} of ${F.length} festivals`;
+  $("tab-list").setAttribute("aria-selected",S.view==="list");$("tab-month").setAttribute("aria-selected",S.view==="month");
+  $("view").innerHTML=S.view==="list"?renderList(evs):renderMonth(evs);
+  save();
+}
+
+// ---- subscribe
+function feedUrl(path){return D.siteUrl?`${D.siteUrl}/${path}`:path}
+function bestFeed(){
+  const one=s=>s.size===1?[...s][0]:null;const slug=s=>s.normalize("NFKD").replace(/[^\x00-\x7f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+  const rslug=r=>slug(r);const fe=D.feeds;
+  const c=one(S.countries),r=one(S.regions),g=one(S.genres),z=one(S.sizes);
+  if(c&&fe.country[slug(c)])return["country",slug(c)];
+  if(r&&g&&fe["region-genre"][`${rslug(r)}--${slug(g)}`])return["region-genre",`${rslug(r)}--${slug(g)}`];
+  if(r)return["region",rslug(r)];if(g)return["genre",slug(g)];if(z)return["size",z];return["all","all"]}
+function fillPick(kind,key){
+  $("pickKind").value=kind;const opts=D.feeds[kind];
+  $("pickKey").innerHTML=Object.entries(opts).map(([k,v])=>`<option value="${k}">${esc(v.name.replace("Festivals — ",""))} (${v.count})</option>`).join("");
+  $("pickKey").value=key;$("pickKey").disabled=kind==="all";showFeed(kind,key)}
+function showFeed(kind,key){const f=D.feeds[kind][key];if(!f)return;
+  const url=feedUrl(f.path);$("feedName").textContent=f.name;$("feedCount").textContent=`${f.count} events`;$("feedUrl").value=url;
+  const live=!!D.siteUrl;$("notLive").hidden=live;
+  $("gcal").href=live?`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(url.replace(/^https?:/,"webcal:"))}`:"#";
+  $("webcal").href=live?url.replace(/^https?:/,"webcal:"):"#"}
+function openSub(){const[k,v]=bestFeed();const b=bestFeed().join()!=="all,all";$("feedHint").textContent=b?"Matches your current filters":"All festivals";fillPick(k,v);$("subUI").hidden=false;$("closeSub").focus()}
+function toast(t){const el=$("toast");el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,1800)}
+
+// ---- events
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-k]");
+  if(t&&t.tagName==="BUTTON"){const set=S[t.dataset.k];set.has(t.dataset.v)?set.delete(t.dataset.v):set.add(t.dataset.v);
+    if(t.dataset.k==="regions")for(const c of[...S.countries]){const f=F.find(f=>f.country===c);if(S.regions.size&&!S.regions.has(f.region))S.countries.delete(c)}
+    render();return}
+  const cl=e.target.closest("[data-clear]");if(cl){S[cl.dataset.clear].clear();render();return}
+  const nav=e.target.closest("[data-nav]");if(nav){const[y,m]=S.month.split("-").map(Number);const d=new Date(y,m-1+Number(nav.dataset.nav),1);S.month=iso(d).slice(0,7);render();return}
+  const go=e.target.closest("[data-goto]");if(go){const ev=filtered().find(x=>x.fid===go.dataset.goto&&x.end>=todayISO);S.view="list";S.open=ev?`${ev.fid}|${ev.start}`:null;render();const el=$(go.dataset.goto);if(el)el.scrollIntoView({block:"center"});return}
+  const more=e.target.closest("[data-day]");if(more){S.view="list";render();return}
+  const row=e.target.closest("[data-open]");if(row){S.open=S.open===row.dataset.open?null:row.dataset.open;render();return}
+});
+document.addEventListener("change",e=>{const t=e.target;if(t.matches("input[data-k]")){t.checked?S.countries.add(t.dataset.v):S.countries.delete(t.dataset.v);render()}});
+$("q").addEventListener("input",e=>{S.q=e.target.value.trim();render()});
+$("cq").addEventListener("input",e=>{S.cq=e.target.value.trim();renderFilters()});
+$("confirmedOnly").addEventListener("change",e=>{S.confirmedOnly=e.target.checked;render()});
+$("tab-list").onclick=()=>{S.view="list";render()};$("tab-month").onclick=()=>{S.view="month";render()};
+$("ftoggle").onclick=()=>{const o=$("filters").classList.toggle("open");$("ftoggle").setAttribute("aria-expanded",o)};
+$("openSub").onclick=openSub;$("closeSub").onclick=$("scrim").onclick=()=>{$("subUI").hidden=true};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("subUI").hidden=true});
+$("pickKind").onchange=e=>{const k=e.target.value;fillPick(k,Object.keys(D.feeds[k])[0])};
+$("pickKey").onchange=e=>showFeed($("pickKind").value,e.target.value);
+$("copy").onclick=()=>{const v=$("feedUrl").value;navigator.clipboard.writeText(v).then(()=>toast("Address copied"),()=>{$("feedUrl").select();toast("Press Ctrl+C / ⌘C to copy")})};
+
+fetch("data/festivals.json").then(r=>r.json()).then(d=>{
+  D=d;F=d.festivals;byId=Object.fromEntries(F.map(f=>[f.id,f]));
+  load();$("confirmedOnly").checked=S.confirmedOnly;
+  const conf=new Set(d.events.filter(e=>e.status==="confirmed").map(e=>e.fid)).size;
+  $("sub").textContent=`${F.length} music and art festivals across North America, Europe, Asia-Pacific, Latin America and Africa. Updated ${d.generated.slice(0,4)}-${d.generated.slice(4,6)}-${d.generated.slice(6,8)}.`;
+  if(d.repo){$("suggest").hidden=false;$("suggest").href=`https://github.com/${d.repo}/issues/new?template=festival.yml`}
+  const h=location.hash.slice(1);if(h&&byId[h]){const ev=d.events.find(e=>e.fid===h&&e.end>=todayISO);if(ev)S.open=`${ev.fid}|${ev.start}`;S.view="list"}
+  render();if(h&&byId[h]){const el=$(h);if(el)el.scrollIntoView({block:"center"})}
+}).catch(()=>{$("view").innerHTML='<div class="empty">The festival data could not be loaded. Reload the page to try again.</div>'});
+</script>

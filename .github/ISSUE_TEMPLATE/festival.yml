@@ -1,0 +1,45 @@
+name: Add or correct a festival
+description: Suggest a new festival, or fix dates or details for one already on the calendar.
+title: "Festival: "
+labels: ["festival-update"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of change?
+      options:
+        - Dates announced or changed
+        - Correct other details (location, genre, attendance, website)
+        - Add a new festival
+        - Festival cancelled or discontinued
+    validations:
+      required: true
+  - type: input
+    id: festival
+    attributes:
+      label: Festival name
+      placeholder: e.g. Primavera Sound Barcelona
+    validations:
+      required: true
+  - type: input
+    id: festival_id
+    attributes:
+      label: Festival ID (if it's already on the calendar)
+      description: Shown in the page address when you open a festival, e.g. primavera-sound
+  - type: input
+    id: dates
+    attributes:
+      label: Dates
+      placeholder: e.g. 2027-06-02 to 2027-06-06 (list each weekend for multi-weekend festivals)
+  - type: textarea
+    id: details
+    attributes:
+      label: Other details
+      description: City, country, genres, typical total attendance, website — whatever is new or wrong.
+  - type: input
+    id: source
+    attributes:
+      label: Source link
+      description: Official announcement or a reliable news article.
+    validations:
+      required: true

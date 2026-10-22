@@ -1,0 +1,139 @@
+id,name,city,country,genres,attendance,pattern,years,website
+coachella,Coachella Valley Music and Arts Festival,Indio,United States,Pop;Indie;Hip-Hop;Electronic;Arts,250000,4/2/Fri/3+7,,https://www.coachella.com
+stagecoach,Stagecoach,Indio,United States,Country,75000,4/4/Fri/3,,https://www.stagecoachfestival.com
+edc-las-vegas,Electric Daisy Carnival Las Vegas,Las Vegas,United States,Electronic,525000,5/3/Fri/3,,https://lasvegas.electricdaisycarnival.com
+lollapalooza-chicago,Lollapalooza,Chicago,United States,Pop;Hip-Hop;Indie;Electronic;Rock,400000,7/L/Thu/4,,https://www.lollapalooza.com
+bonnaroo,Bonnaroo Music and Arts Festival,Manchester,United States,Rock;Indie;Electronic;Hip-Hop;Arts,80000,6/2/Thu/4,,https://www.bonnaroo.com
+austin-city-limits,Austin City Limits Music Festival,Austin,United States,Pop;Rock;Indie;Hip-Hop,450000,10/1/Fri/3+7,,https://www.aclfestival.com
+governors-ball,Governors Ball,New York City,United States,Pop;Hip-Hop;Indie,150000,6/1/Fri/3,,https://www.govball.com
+outside-lands,Outside Lands,San Francisco,United States,Indie;Rock;Pop;Electronic,225000,8/2/Fri/3,,https://www.sfoutsidelands.com
+ultra-miami,Ultra Music Festival,Miami,United States,Electronic,165000,3/L/Fri/3,,https://ultramusicfestival.com
+rolling-loud-miami,Rolling Loud Miami,Miami,United States,Hip-Hop,180000,7/3/Fri/3,,https://www.rollingloud.com
+rolling-loud-california,Rolling Loud California,Inglewood,United States,Hip-Hop,120000,3/2/Fri/3,,https://www.rollingloud.com
+electric-forest,Electric Forest,Rothbury,United States,Electronic;Indie;Arts,45000,6/4/Thu/4,,https://electricforestfestival.com
+summerfest,Summerfest,Milwaukee,United States,Rock;Pop;Country;Hip-Hop,600000,6/3/Thu/9,,https://www.summerfest.com
+jazz-fest,New Orleans Jazz and Heritage Festival,New Orleans,United States,Jazz;Blues;R&B/Soul;Folk;World,475000,4/L/Fri/4+7,,https://www.nojazzfest.com
+sxsw,SXSW Music Festival,Austin,United States,Indie;Hip-Hop;Rock;Arts,300000,3/2/Mon/7,,https://www.sxsw.com
+burning-man,Burning Man,Black Rock City,United States,Arts;Electronic,75000,8/L/Sun/9,,https://burningman.org
+bottlerock,BottleRock Napa Valley,Napa,United States,Rock;Pop;Hip-Hop,120000,5/L/Fri/3,,https://www.bottlerocknapavalley.com
+sea-hear-now,Sea.Hear.Now,Asbury Park,United States,Rock;Indie,80000,9/3/Sat/2,,https://seahearnowfestival.com
+boston-calling,Boston Calling,Boston,United States,Rock;Indie;Pop,120000,5/L/Fri/3,,https://bostoncalling.com
+riot-fest,Riot Fest,Chicago,United States,Punk;Rock;Metal,150000,9/3/Fri/3,,https://riotfest.org
+louder-than-life,Louder Than Life,Louisville,United States,Metal;Rock,200000,9/3/Thu/4,,https://louderthanlifefestival.com
+welcome-to-rockville,Welcome to Rockville,Daytona Beach,United States,Metal;Rock,180000,5/2/Thu/4,,https://welcometorockville.com
+sonic-temple,Sonic Temple,Columbus,United States,Metal;Rock,140000,5/2/Fri/3,,https://sonictemplefestival.com
+aftershock,Aftershock,Sacramento,United States,Metal;Rock,160000,10/1/Thu/4,,https://aftershockfestival.com
+inkcarceration,Inkcarceration,Mansfield,United States,Metal;Rock,75000,7/2/Fri/3,,https://inkcarceration.com
+beyond-wonderland-socal,Beyond Wonderland SoCal,San Bernardino,United States,Electronic,80000,3/L/Fri/2,,https://socal.beyondwonderland.com
+nocturnal-wonderland,Nocturnal Wonderland,San Bernardino,United States,Electronic,70000,9/3/Fri/2,,https://nocturnalwonderland.com
+hard-summer,HARD Summer,Inglewood,United States,Electronic;Hip-Hop,100000,8/1/Sat/2,,https://hardsummer.com
+lightning-in-a-bottle,Lightning in a Bottle,Buena Vista Lake,United States,Electronic;Arts,25000,5/L/Wed/5,,https://www.lightninginabottle.org
+newport-folk,Newport Folk Festival,Newport,United States,Folk;Indie,30000,7/L/Fri/3,,https://www.newportfolk.org
+newport-jazz,Newport Jazz Festival,Newport,United States,Jazz,30000,8/1/Fri/3,,https://www.newportjazz.org
+monterey-jazz,Monterey Jazz Festival,Monterey,United States,Jazz,40000,9/L/Fri/3,,https://montereyjazzfestival.org
+telluride-bluegrass,Telluride Bluegrass Festival,Telluride,United States,Folk;Country,40000,6/3/Thu/4,,https://bluegrass.com/telluride
+merlefest,MerleFest,Wilkesboro,United States,Folk;Country;Blues,75000,4/L/Thu/4,,https://merlefest.org
+hardly-strictly-bluegrass,Hardly Strictly Bluegrass,San Francisco,United States,Folk;Country,500000,10/1/Fri/3,,https://www.hardlystrictlybluegrass.com
+head-in-the-clouds,Head in the Clouds,Pasadena,United States,Pop;Hip-Hop;World,60000,5/1/Sat/2,,https://www.88rising.com
+breakaway-ohio,Breakaway Music Festival Ohio,Columbus,United States,Electronic;Hip-Hop,50000,8/L/Fri/2,,https://www.breakawayfestival.com
+imagine-festival,Imagine Music Festival,Hampton,United States,Electronic,40000,9/3/Fri/3,,https://www.imaginefestival.com
+okeechobee,Okeechobee Music and Arts Festival,Okeechobee,United States,Electronic;Hip-Hop;Indie;Arts,30000,3/1/Thu/4,,https://www.okeechobeefest.com
+hangout-fest,Hangout Music Festival,Gulf Shores,United States,Pop;Rock;Hip-Hop,40000,5/3/Fri/3,,https://www.hangoutmusicfest.com
+shaky-knees,Shaky Knees,Atlanta,United States,Rock;Indie,120000,9/3/Fri/3,,https://www.shakykneesfestival.com
+cma-fest,CMA Fest,Nashville,United States,Country,300000,6/1/Thu/4,,https://cmafest.com
+country-thunder-az,Country Thunder Arizona,Florence,United States,Country,100000,4/2/Thu/4,,https://www.countrythunder.com
+country-thunder-wi,Country Thunder Wisconsin,Twin Lakes,United States,Country,100000,7/3/Thu/4,,https://www.countrythunder.com
+watershed,Watershed Festival,George,United States,Country,90000,8/1/Fri/3,,https://watershedfest.com
+faster-horses,Faster Horses Festival,Brooklyn,United States,Country,120000,7/3/Fri/3,,https://fasterhorsesfestival.com
+tortuga,Tortuga Music Festival,Fort Lauderdale,United States,Country;Rock,120000,4/1/Fri/3,,https://www.tortugamusicfestival.com
+rock-the-country,Rock the Country,Various,United States,Country;Rock,60000,6/2/Fri/2,,https://www.rockthecountry.com
+essence-fest,Essence Festival of Culture,New Orleans,United States,R&B/Soul;Hip-Hop,500000,7/1/Fri/3,,https://www.essence.com/festival
+roots-picnic,The Roots Picnic,Philadelphia,United States,Hip-Hop;R&B/Soul,60000,5/L/Sat/2,,https://www.rootspicnic.com
+afropunk-brooklyn,Afropunk Brooklyn,New York City,United States,Afro;R&B/Soul;Punk;Hip-Hop,60000,8/L/Sat/2,,https://afropunk.com
+camp-flog-gnaw,Camp Flog Gnaw Carnival,Los Angeles,United States,Hip-Hop;Indie,80000,11/2/Sat/2,,https://www.campfloggnaw.com
+portola,Portola Music Festival,San Francisco,United States,Electronic,80000,9/L/Sat/2,,https://www.portolamusicfestival.com
+movement-detroit,Movement Electronic Music Festival,Detroit,United States,Electronic,100000,5/L/Sat/3,,https://movement.us
+elements-festival,Elements Music and Arts Festival,Long Pond,United States,Electronic;Arts,25000,8/2/Thu/4,,https://elementsfest.com
+edc-orlando,EDC Orlando,Orlando,United States,Electronic,90000,11/2/Fri/3,,https://orlando.electricdaisycarnival.com
+lost-lands,Lost Lands,Legend Valley,United States,Electronic,60000,9/3/Fri/3,,https://lostlandsfestival.com
+bass-canyon,Bass Canyon,George,United States,Electronic,30000,8/3/Fri/3,,https://basscanyon.com
+dirtybird-campout,Dirtybird Campout,Modesto,United States,Electronic,8000,9/4/Thu/4,,https://dirtybirdcampout.com
+second-sky,Second Sky,Oakland,United States,Electronic,40000,9/3/Sat/2,,
+ubbi-dubbi,Ubbi Dubbi,Ennis,United States,Electronic,50000,4/4/Sat/2,,https://ubbidubbifest.com
+suwannee-hulaween,Suwannee Hulaween,Live Oak,United States,Electronic;Rock;Arts,20000,10/L/Thu/4,,https://www.suwanneehulaween.com
+levitation-austin,Levitation,Austin,United States,Rock;Indie,10000,10/L/Thu/4,,https://levitation-austin.com
+just-like-heaven,Just Like Heaven,Pasadena,United States,Indie;Pop,40000,5/1/Sat/1,,https://justlikeheavenfest.com
+cruel-world,Cruel World,Pasadena,United States,Rock;Punk;Indie,40000,5/2/Sat/1,,https://cruelworldfest.com
+kilby-block-party,Kilby Block Party,Salt Lake City,United States,Indie;Rock,90000,5/2/Fri/3,,https://kilbyblockparty.com
+pickathon,Pickathon,Happy Valley,United States,Folk;Indie,9000,7/L/Fri/3,,https://pickathon.com
+summer-camp-mf,Summer Camp Music Festival,Chillicothe,United States,Rock;Electronic;Folk,20000,5/L/Fri/3,,https://www.summercampfestival.com
+bourbon-and-beyond,Bourbon and Beyond,Louisville,United States,Rock;Country;Folk,200000,9/2/Thu/4,,https://bourbonandbeyond.com
+railbird,Railbird Festival,Lexington,United States,Country;Folk;Rock,40000,6/1/Sat/2,,https://railbirdfest.com
+mempho,Mempho Music Festival,Memphis,United States,Rock;Blues;R&B/Soul,20000,10/1/Sat/2,,https://memphofest.com
+warped-tour,Vans Warped Tour,Various,United States,Punk;Rock;Metal,90000,6/2/Sat/2,,https://vanswarpedtour.com
+when-we-were-young,When We Were Young,Las Vegas,United States,Punk;Rock,85000,10/3/Sat/1,,https://whenwewereyoungfestival.com
+hopscotch,Hopscotch Music Festival,Raleigh,United States,Indie;Hip-Hop;Rock,20000,9/1/Thu/3,,https://www.hopscotchmusicfest.com
+treefort,Treefort Music Fest,Boise,United States,Indie;Rock;Hip-Hop;Arts,40000,3/L/Wed/5,,https://www.treefortmusicfest.com
+bumbershoot,Bumbershoot,Seattle,United States,Rock;Indie;Arts,30000,8/L/Sat/2,,https://bumbershoot.com
+capitol-hill-block-party,Capitol Hill Block Party,Seattle,United States,Hip-Hop;Indie;Electronic,30000,7/4/Fri/3,,https://www.capitolhillblockparty.com
+sound-on-sound,Sound on Sound,Bastrop,United States,Indie;Rock,30000,11/1/Fri/3,,https://www.soundonsoundfest.com
+mamby,Mamby on the Beach,Chicago,United States,Electronic;Hip-Hop,40000,6/4/Sat/2,,https://www.mambyonthebeach.com
+lovin-life,Lovin' Life Music Fest,Charlotte,United States,Pop;Rock;Hip-Hop,75000,5/1/Fri/3,,https://lovinlifemusicfest.com
+wonderbus,WonderBus Music and Arts Festival,Columbus,United States,Pop;Indie;Rock,40000,8/L/Fri/3,,https://www.wonderbusfest.com
+gulf-coast-jam,Gulf Coast Jam,Panama City Beach,United States,Country,60000,5/L/Fri/3,,https://www.gulfcoastjam.com
+carolina-country,Carolina Country Music Fest,Myrtle Beach,United States,Country,90000,6/1/Thu/4,,https://carolinacountrymusicfest.com
+country-jam-colorado,Country Jam Colorado,Grand Junction,United States,Country,60000,6/2/Thu/3,,https://countryjam.com
+art-basel-miami,Art Basel Miami Beach,Miami Beach,United States,Arts,80000,12/1/Wed/5,,https://www.artbasel.com
+frieze-los-angeles,Frieze Los Angeles,Santa Monica,United States,Arts,35000,2/L/Thu/4,,https://www.frieze.com
+frieze-new-york,Frieze New York,New York City,United States,Arts,30000,5/2/Wed/5,,https://www.frieze.com
+armory-show,The Armory Show,New York City,United States,Arts,50000,9/1/Thu/4,,https://www.thearmoryshow.com
+whitney-biennial,Whitney Biennial,New York City,United States,Arts,300000,3/3/Wed/170,even,https://whitney.org
+artprize,ArtPrize,Grand Rapids,United States,Arts,500000,9/3/Thu/17,,https://www.artprize.org
+day-of-the-dead-hollywood,Dia de los Muertos Hollywood Forever,Los Angeles,United States,Arts;Latin,40000,F/10-25/1,,
+ojai-music,Ojai Music Festival,Ojai,United States,Classical,8000,6/1/Thu/4,,https://www.ojaifestival.org
+tanglewood,Tanglewood Music Festival,Lenox,United States,Classical,350000,7/1/Fri/60,,https://www.bso.org/tanglewood
+aspen-music,Aspen Music Festival,Aspen,United States,Classical,100000,6/L/Thu/56,,https://www.aspenmusicfestival.com
+spoleto-usa,Spoleto Festival USA,Charleston,United States,Classical;Jazz;Arts,70000,5/4/Fri/17,,https://spoletousa.org
+detroit-jazz,Detroit Jazz Festival,Detroit,United States,Jazz,300000,8/L/Fri/4,,https://detroitjazzfest.org
+chicago-blues,Chicago Blues Festival,Chicago,United States,Blues,500000,6/1/Fri/3,,
+chicago-jazz,Chicago Jazz Festival,Chicago,United States,Jazz,100000,8/L/Thu/4,,
+ny-jazz-winter,Winter Jazzfest,New York City,United States,Jazz,15000,1/2/Wed/6,,https://www.winterjazzfest.com
+calle-ocho,Calle Ocho Music Festival,Miami,United States,Latin,1000000,3/2/Sun/1,,https://carnavalmiami.com
+suenos,Sueños Music Festival,Chicago,United States,Latin,120000,5/L/Sat/2,,https://www.suenosfestival.com
+besame-mucho,Besame Mucho,Los Angeles,United States,Latin;Rock;Pop,80000,12/1/Sat/1,,https://besamemuchofest.com
+dreamville,Dreamville Festival,Raleigh,United States,Hip-Hop;R&B/Soul,80000,4/1/Sat/2,,https://dreamvillefest.com
+broccoli-city,Broccoli City Festival,Washington,United States,Hip-Hop;R&B/Soul,50000,7/3/Sat/2,,https://www.broccolicity.com
+summer-smash,Summer Smash,Bridgeview,United States,Hip-Hop,60000,6/3/Fri/3,,https://thesummersmash.com
+festival-pier-xponential,XPoNential Music Festival,Camden,United States,Indie;Folk;Rock,20000,9/3/Fri/3,,https://xpn.org
+ohana,Ohana Festival,Dana Point,United States,Rock;Indie,40000,9/L/Fri/3,,https://www.ohanafest.com
+beachlife,BeachLife Festival,Redondo Beach,United States,Rock;Reggae,45000,5/1/Fri/3,,https://beachlifefestival.com
+california-roots,California Roots,Monterey,United States,Reggae;Rock,30000,5/L/Fri/3,,https://californiaroots.com
+cali-vibes,Cali Vibes,Long Beach,United States,Reggae;Hip-Hop,40000,2/3/Fri/3,,https://calivibesfest.com
+oceans-calling,Oceans Calling,Ocean City,United States,Rock;Indie,50000,9/L/Fri/3,,https://www.oceanscallingfestival.com
+pilgrimage,Pilgrimage Music and Cultural Festival,Franklin,United States,Rock;Folk;Country,40000,9/4/Sat/2,,https://pilgrimagefestival.com
+high-water,High Water Festival,North Charleston,United States,Indie;Folk;Rock,25000,4/3/Sat/2,,https://highwaterfest.com
+shambhala,Shambhala Music Festival,Salmo,Canada,Electronic;Arts,15000,7/4/Wed/5,,https://www.shambhalamusicfestival.com
+osheaga,Osheaga,Montreal,Canada,Indie;Pop;Hip-Hop;Electronic,150000,8/1/Fri/3,,https://www.osheaga.com
+ile-soniq,ÎleSoniq,Montreal,Canada,Electronic,70000,8/2/Fri/2,,https://www.ilesoniq.com
+heavy-montreal,Heavy Montréal,Montreal,Canada,Metal,50000,7/4/Fri/3,,https://www.heavymontreal.com
+veld,VELD Music Festival,Toronto,Canada,Electronic;Hip-Hop,60000,8/1/Sat/2,,https://veldmusicfestival.com
+boots-and-hearts,Boots and Hearts,Oro-Medonte,Canada,Country,45000,8/1/Thu/4,,https://bootsandhearts.com
+cavendish-beach,Cavendish Beach Music Festival,Cavendish,Canada,Country,75000,7/2/Thu/4,,https://www.cavendishbeachmusic.com
+calgary-folk,Calgary Folk Music Festival,Calgary,Canada,Folk;World,50000,7/4/Thu/4,,https://www.calgaryfolkfest.com
+winnipeg-folk,Winnipeg Folk Festival,Birds Hill Park,Canada,Folk;Indie,70000,7/2/Thu/4,,https://www.winnipegfolkfestival.ca
+edmonton-folk,Edmonton Folk Music Festival,Edmonton,Canada,Folk,90000,8/2/Thu/4,,https://www.efmf.ab.ca
+vancouver-folk,Vancouver Folk Music Festival,Vancouver,Canada,Folk;World,30000,7/3/Fri/3,,https://thefestival.bc.ca
+montreal-jazz,Festival International de Jazz de Montréal,Montreal,Canada,Jazz;Blues;World,2000000,6/L/Thu/10,,https://www.montrealjazzfest.com
+festival-dete-quebec,Festival d'été de Québec,Quebec City,Canada,Rock;Pop;Hip-Hop,1000000,7/1/Thu/11,,https://www.feq.ca
+ottawa-bluesfest,RBC Bluesfest,Ottawa,Canada,Rock;Pop;Blues,300000,7/1/Thu/10,,https://ottawabluesfest.ca
+toronto-jazz,TD Toronto Jazz Festival,Toronto,Canada,Jazz,500000,6/L/Fri/10,,https://torontojazz.com
+vancouver-jazz,TD Vancouver International Jazz Festival,Vancouver,Canada,Jazz,500000,6/L/Fri/10,,https://www.coastaljazz.ca
+mutek-montreal,MUTEK Montréal,Montreal,Canada,Electronic;Arts,40000,8/L/Tue/6,,https://montreal.mutek.org
+igloofest,Igloofest,Montreal,Canada,Electronic,100000,1/3/Thu/17,,https://www.igloofest.ca
+nuit-blanche-toronto,Nuit Blanche Toronto,Toronto,Canada,Arts,1000000,10/1/Sat/1,,https://www.toronto.ca/nuitblanche
+craven-country,Country Thunder Saskatchewan,Craven,Canada,Country,25000,7/2/Thu/4,,https://www.countrythunder.com
+rifflandia,Rifflandia,Victoria,Canada,Indie;Electronic;Hip-Hop,25000,9/3/Fri/3,,https://rifflandia.com
+escapade,Escapade Music Festival,Ottawa,Canada,Electronic,40000,6/4/Sat/2,,https://escapademusicfestival.com
+fme,Festival de musique émergente,Rouyn-Noranda,Canada,Indie;Rock,30000,8/L/Thu/4,,https://fmeat.org
+evolve-festival,Evolve Festival,Antigonish,Canada,Folk;Electronic;Reggae,5000,7/2/Thu/4,,https://evolvefestival.com
+festival-international-louisiane,Festival International de Louisiane,Lafayette,United States,World;Folk;Afro,300000,4/4/Wed/5,,https://www.festivalinternational.org

@@ -1,0 +1,216 @@
+id,name,city,country,genres,attendance,pattern,years,website
+glastonbury,Glastonbury Festival,Pilton,United Kingdom,Rock;Pop;Indie;Electronic;World;Arts,210000,6/L/Wed/5,,https://www.glastonburyfestivals.co.uk
+reading,Reading Festival,Reading,United Kingdom,Rock;Indie;Hip-Hop;Pop,105000,8/L/Thu/4,,https://www.readingfestival.com
+leeds,Leeds Festival,Leeds,United Kingdom,Rock;Indie;Hip-Hop;Pop,95000,8/L/Thu/4,,https://www.leedsfestival.com
+download,Download Festival,Donington Park,United Kingdom,Metal;Rock,110000,6/2/Wed/5,,https://downloadfestival.co.uk
+isle-of-wight,Isle of Wight Festival,Newport,United Kingdom,Rock;Pop,90000,6/3/Thu/4,,https://isleofwightfestival.com
+creamfields,Creamfields North,Daresbury,United Kingdom,Electronic,70000,8/L/Thu/4,,https://www.creamfields.com
+wireless,Wireless Festival,London,United Kingdom,Hip-Hop;R&B/Soul,150000,7/2/Fri/3,,https://www.wirelessfestival.co.uk
+bst-hyde-park,BST Hyde Park,London,United Kingdom,Rock;Pop,500000,6/L/Fri/17,,https://www.bst-hydepark.com
+latitude,Latitude Festival,Henham Park,United Kingdom,Indie;Pop;Arts,40000,7/4/Thu/4,,https://www.latitudefestival.com
+green-man,Green Man Festival,Crickhowell,United Kingdom,Indie;Folk,25000,8/3/Thu/4,,https://www.greenman.net
+boomtown,Boomtown Fair,Winchester,United Kingdom,Reggae;Electronic;Punk;Arts,66000,8/2/Wed/5,,https://www.boomtownfair.co.uk
+bestival,Camp Bestival Shropshire,Weston Park,United Kingdom,Pop;Indie,30000,8/3/Thu/4,,https://www.campbestival.net
+camp-bestival,Camp Bestival Dorset,Lulworth,United Kingdom,Pop;Indie,30000,7/L/Thu/4,,https://www.campbestival.net
+trnsmt,TRNSMT,Glasgow,United Kingdom,Indie;Rock;Pop,150000,7/2/Fri/3,,https://trnsmtfest.com
+parklife,Parklife,Manchester,United Kingdom,Electronic;Hip-Hop,80000,6/2/Sat/2,,https://www.parklife.uk.com
+all-points-east,All Points East,London,United Kingdom,Indie;Electronic;Rock,40000,8/3/Fri/10,,https://www.allpointseastfestival.com
+mighty-hoopla,Mighty Hoopla,London,United Kingdom,Pop,50000,5/L/Sat/2,,https://www.mightyhoopla.com
+field-day,Field Day,London,United Kingdom,Electronic,25000,5/4/Sat/1,,https://fielddayfestivals.com
+standon-calling,Standon Calling,Standon,United Kingdom,Indie;Pop,15000,7/4/Thu/4,,https://standon-calling.com
+end-of-the-road,End of the Road,Larmer Tree Gardens,United Kingdom,Indie;Folk,15000,8/L/Thu/4,,https://www.endoftheroadfestival.com
+bloodstock,Bloodstock Open Air,Catton Park,United Kingdom,Metal,20000,8/2/Thu/4,,https://www.bloodstock.uk.com
+2000trees,2000trees,Cheltenham,United Kingdom,Rock;Punk,15000,7/2/Wed/4,,https://www.twothousandtrees.co.uk
+kendal-calling,Kendal Calling,Penrith,United Kingdom,Indie;Rock,40000,7/L/Thu/4,,https://www.kendalcalling.co.uk
+victorious,Victorious Festival,Portsmouth,United Kingdom,Indie;Rock;Pop,65000,8/L/Fri/3,,https://www.victoriousfestival.co.uk
+cambridge-folk,Cambridge Folk Festival,Cambridge,United Kingdom,Folk,14000,7/L/Thu/4,,https://www.cambridgelivetrust.co.uk/folk-festival
+womad-uk,WOMAD UK,Malmesbury,United Kingdom,World;Afro;Folk,40000,7/L/Thu/4,,https://womad.co.uk
+cheltenham-jazz,Cheltenham Jazz Festival,Cheltenham,United Kingdom,Jazz,40000,4/L/Wed/6,,https://www.cheltenhamfestivals.com
+london-jazz,EFG London Jazz Festival,London,United Kingdom,Jazz,100000,11/2/Fri/10,,https://efglondonjazzfestival.org.uk
+bbc-proms,BBC Proms,London,United Kingdom,Classical,300000,7/3/Fri/58,,https://www.bbc.co.uk/proms
+edinburgh-fringe,Edinburgh Festival Fringe,Edinburgh,United Kingdom,Arts,2500000,8/1/Fri/25,,https://www.edfringe.com
+edinburgh-international,Edinburgh International Festival,Edinburgh,United Kingdom,Classical;Arts,150000,8/1/Fri/23,,https://www.eif.co.uk
+notting-hill-carnival,Notting Hill Carnival,London,United Kingdom,Reggae;World;Afro;Arts,1000000,8/L/Sun/2,,https://nhcarnival.org
+frieze-london,Frieze London,London,United Kingdom,Arts,60000,10/2/Wed/5,,https://www.frieze.com
+hay-festival,Hay Festival,Hay-on-Wye,United Kingdom,Arts,270000,5/L/Thu/11,,https://www.hayfestival.com
+brighton-festival,Brighton Festival,Brighton,United Kingdom,Arts,150000,5/1/Sat/23,,https://brightonfestival.org
+manchester-international,Manchester International Festival,Manchester,United Kingdom,Arts,300000,7/1/Thu/18,odd,https://factoryinternational.org
+belladrum,Belladrum Tartan Heart,Beauly,United Kingdom,Indie;Folk;Rock,20000,7/L/Thu/3,,https://www.tartanheartfestival.co.uk
+we-out-here,We Out Here,Wimborne,United Kingdom,Jazz;Electronic;Afro,25000,8/3/Wed/5,,https://www.weoutherefestival.com
+electric-picnic,Electric Picnic,Stradbally,Ireland,Indie;Pop;Electronic;Arts,75000,8/L/Fri/3,,https://www.electricpicnic.ie
+all-together-now,All Together Now,Curraghmore,Ireland,Indie;Electronic;Arts,25000,8/1/Fri/3,,https://alltogethernow.ie
+body-and-soul,Body and Soul,Westmeath,Ireland,Electronic;Indie;Arts,12000,6/3/Fri/3,,https://bodyandsoul.ie
+galway-arts,Galway International Arts Festival,Galway,Ireland,Arts,200000,7/2/Mon/14,,https://www.giaf.ie
+cork-jazz,Guinness Cork Jazz Festival,Cork,Ireland,Jazz,40000,10/L/Fri/4,,https://guinnessjazzfestival.com
+tomorrowland,Tomorrowland,Boom,Belgium,Electronic,400000,7/3/Fri/3+7,,https://www.tomorrowland.com
+rock-werchter,Rock Werchter,Werchter,Belgium,Rock;Indie;Pop,150000,7/1/Thu/4,,https://www.rockwerchter.be
+pukkelpop,Pukkelpop,Hasselt,Belgium,Rock;Indie;Hip-Hop;Electronic,240000,8/3/Thu/4,,https://www.pukkelpop.be
+graspop,Graspop Metal Meeting,Dessel,Belgium,Metal,200000,6/3/Thu/4,,https://www.graspop.be
+dour,Dour Festival,Dour,Belgium,Electronic;Hip-Hop;Indie,240000,7/2/Wed/5,,https://www.dourfestival.eu
+gent-jazz,Gent Jazz,Ghent,Belgium,Jazz,40000,7/2/Thu/7,,https://www.gentjazz.com
+gentse-feesten,Gentse Feesten,Ghent,Belgium,Arts;Pop;Folk,1500000,7/3/Fri/10,,https://gentsefeesten.stad.gent
+couleur-cafe,Couleur Café,Brussels,Belgium,Hip-Hop;Afro;World,75000,6/L/Fri/3,,https://www.couleurcafe.org
+lowlands,Lowlands,Biddinghuizen,Netherlands,Indie;Rock;Electronic;Hip-Hop,65000,8/3/Fri/3,,https://lowlands.nl
+pinkpop,Pinkpop,Landgraaf,Netherlands,Rock;Pop,70000,6/3/Fri/3,,https://www.pinkpop.nl
+defqon1,Defqon.1,Biddinghuizen,Netherlands,Electronic,150000,6/L/Thu/4,,https://www.q-dance.com/defqon1
+mysteryland,Mysteryland,Haarlemmermeer,Netherlands,Electronic,100000,7/L/Fri/3,,https://www.mysteryland.nl
+awakenings,Awakenings Festival,Hilvarenbeek,Netherlands,Electronic,120000,7/2/Fri/3,,https://www.awakenings.com
+dgtl,DGTL Amsterdam,Amsterdam,Netherlands,Electronic,40000,4/1/Sat/2,,https://dgtl.nl
+dekmantel,Dekmantel Festival,Amsterdam,Netherlands,Electronic,40000,7/L/Wed/5,,https://www.dekmantelfestival.com
+ade,Amsterdam Dance Event,Amsterdam,Netherlands,Electronic,450000,10/3/Wed/5,,https://www.amsterdam-dance-event.nl
+north-sea-jazz,North Sea Jazz Festival,Rotterdam,Netherlands,Jazz;R&B/Soul;Hip-Hop,70000,7/2/Fri/3,,https://www.northseajazz.com
+best-kept-secret,Best Kept Secret,Hilvarenbeek,Netherlands,Indie;Electronic,50000,6/2/Fri/3,,https://www.bestkeptsecret.nl
+down-the-rabbit-hole,Down the Rabbit Hole,Ewijk,Netherlands,Indie;Rock;Hip-Hop,60000,7/1/Fri/3,,https://downtherabbithole.nl
+roadburn,Roadburn,Tilburg,Netherlands,Metal;Rock,15000,4/3/Thu/4,,https://roadburn.com
+paaspop,Paaspop,Schijndel,Netherlands,Pop;Rock,90000,3/L/Fri/3,,https://www.paaspop.nl
+wish-outdoor,WiSH Outdoor,Beek en Donk,Netherlands,Electronic;Pop,50000,7/1/Fri/3,,
+milkshake,Milkshake Festival,Amsterdam,Netherlands,Electronic;Pop,50000,7/L/Sat/2,,https://www.milkshakefestival.com
+rock-am-ring,Rock am Ring,Nürburg,Germany,Rock;Metal,90000,6/1/Fri/3,,https://www.rock-am-ring.com
+rock-im-park,Rock im Park,Nuremberg,Germany,Rock;Metal,70000,6/1/Fri/3,,https://www.rock-im-park.com
+wacken,Wacken Open Air,Wacken,Germany,Metal,85000,7/L/Wed/4,,https://www.wacken.com
+hurricane,Hurricane Festival,Scheeßel,Germany,Rock;Indie;Pop,78000,6/3/Fri/3,,https://www.hurricane.de
+southside,Southside Festival,Neuhausen ob Eck,Germany,Rock;Indie;Pop,65000,6/3/Fri/3,,https://www.southside.de
+lollapalooza-berlin,Lollapalooza Berlin,Berlin,Germany,Pop;Hip-Hop;Electronic,85000,7/2/Sat/2,,https://www.lollapaloozade.com
+fusion,Fusion Festival,Lärz,Germany,Electronic;Arts,70000,6/L/Wed/5,,https://www.fusion-festival.de
+splash,Splash! Festival,Gräfenhainichen,Germany,Hip-Hop,30000,7/1/Thu/3,,https://splash-festival.de
+parookaville,Parookaville,Weeze,Germany,Electronic,225000,7/3/Fri/3,,https://www.parookaville.com
+nature-one,Nature One,Kastellaun,Germany,Electronic,65000,7/L/Fri/3,,https://www.nature-one.de
+time-warp,Time Warp,Mannheim,Germany,Electronic,25000,4/1/Sat/1,,https://www.time-warp.de
+summer-breeze,Summer Breeze Open Air,Dinkelsbühl,Germany,Metal,45000,8/2/Wed/4,,https://www.summer-breeze.de
+highfield,Highfield Festival,Großpösna,Germany,Rock;Indie,35000,8/3/Fri/3,,https://www.highfield.de
+deichbrand,Deichbrand,Cuxhaven,Germany,Rock;Hip-Hop;Pop,60000,7/3/Thu/4,,https://www.deichbrand.de
+open-flair,Open Flair,Eschwege,Germany,Rock;Punk,25000,8/2/Wed/5,,https://www.open-flair.de
+haldern-pop,Haldern Pop,Rees-Haldern,Germany,Indie,7000,8/2/Thu/3,,https://www.haldernpop.com
+reeperbahn,Reeperbahn Festival,Hamburg,Germany,Indie;Pop,50000,9/3/Wed/4,,https://www.reeperbahnfestival.com
+bayreuth,Bayreuth Festival,Bayreuth,Germany,Classical,58000,7/L/Fri/32,,https://www.bayreuther-festspiele.de
+documenta,documenta,Kassel,Germany,Arts,750000,6/3/Sat/100,every5:2022,https://www.documenta.de
+berlin-biennale,Berlin Biennale,Berlin,Germany,Arts,100000,6/2/Sat/80,odd,https://www.berlinbiennale.de
+jazzfest-berlin,Jazzfest Berlin,Berlin,Germany,Jazz,15000,10/L/Thu/4,,https://www.berlinerfestspiele.de
+karneval-der-kulturen,Karneval der Kulturen,Berlin,Germany,World;Afro;Latin,750000,5/3/Fri/4,,https://www.karneval-berlin.de
+mayday-dortmund,Mayday,Dortmund,Germany,Electronic,20000,4/L/Thu/1,,
+frequency,FM4 Frequency Festival,St. Pölten,Austria,Rock;Hip-Hop;Pop,200000,8/3/Thu/3,,https://www.frequency.at
+nova-rock,Nova Rock,Nickelsdorf,Austria,Rock;Metal,225000,6/2/Wed/4,,https://www.novarock.at
+donauinselfest,Donauinselfest,Vienna,Austria,Pop;Rock;Hip-Hop,2500000,6/4/Fri/3,,https://donauinselfest.at
+electric-love,Electric Love,Salzburg,Austria,Electronic,180000,7/1/Thu/3,,https://www.electriclove.at
+salzburg-festival,Salzburg Festival,Salzburg,Austria,Classical;Arts,250000,7/3/Sat/40,,https://www.salzburgerfestspiele.at
+ars-electronica,Ars Electronica Festival,Linz,Austria,Arts;Electronic,110000,9/1/Wed/5,,https://ars.electronica.art
+montreux-jazz,Montreux Jazz Festival,Montreux,Switzerland,Jazz;Pop;Rock;Blues,250000,7/1/Fri/16,,https://www.montreuxjazzfestival.com
+paleo,Paléo Festival Nyon,Nyon,Switzerland,Rock;Pop;World,230000,7/3/Tue/6,,https://yeah.paleo.ch
+openair-st-gallen,OpenAir St. Gallen,St. Gallen,Switzerland,Rock;Indie;Hip-Hop,110000,6/L/Thu/4,,https://www.openairsg.ch
+openair-frauenfeld,Openair Frauenfeld,Frauenfeld,Switzerland,Hip-Hop,150000,7/2/Wed/3,,https://www.openair-frauenfeld.ch
+gurten,Gurtenfestival,Bern,Switzerland,Pop;Rock;Hip-Hop,80000,7/3/Wed/4,,https://www.gurtenfestival.ch
+street-parade,Street Parade,Zurich,Switzerland,Electronic,900000,8/2/Sat/1,,https://www.streetparade.com
+art-basel,Art Basel,Basel,Switzerland,Arts,90000,6/2/Thu/4,,https://www.artbasel.com
+zurich-openair,Zurich Openair,Zurich,Switzerland,Electronic;Indie,60000,8/L/Wed/4,,https://zurich-openair.ch
+primavera-sound,Primavera Sound Barcelona,Barcelona,Spain,Indie;Pop;Electronic;Rock;Hip-Hop,250000,6/1/Wed/5,,https://www.primaverasound.com
+sonar,Sónar Barcelona,Barcelona,Spain,Electronic;Arts,120000,6/3/Thu/3,,https://sonar.es
+mad-cool,Mad Cool,Madrid,Spain,Rock;Indie;Pop,180000,7/2/Wed/4,,https://madcoolfestival.es
+bbk-live,Bilbao BBK Live,Bilbao,Spain,Indie;Rock;Electronic,120000,7/2/Thu/3,,https://www.bilbaobbklive.com
+fib,Festival Internacional de Benicàssim,Benicàssim,Spain,Indie;Rock;Pop,120000,7/3/Thu/4,,https://fiberfib.com
+cruilla,Cruïlla,Barcelona,Spain,Pop;Rock;World;Hip-Hop,75000,7/2/Wed/4,,https://www.cruilla.com
+arenal-sound,Arenal Sound,Burriana,Spain,Pop;Electronic;Latin,300000,7/L/Tue/6,,https://www.arenalsound.com
+medusa,Medusa Festival,Cullera,Spain,Electronic,300000,8/2/Wed/6,,https://medusasunbeach.com
+resurrection-fest,Resurrection Fest,Viveiro,Spain,Metal;Punk,140000,6/L/Wed/4,,https://www.resurrectionfest.es
+sonorama,Sonorama Ribera,Aranda de Duero,Spain,Indie;Pop,100000,8/2/Wed/5,,https://sonorama-aranda.com
+rototom,Rototom Sunsplash,Benicàssim,Spain,Reggae,220000,8/3/Sat/8,,https://rototomsunsplash.com
+low-festival,Low Festival,Benidorm,Spain,Indie;Rock,90000,7/L/Fri/3,,https://lowfestival.es
+dcode,DCODE,Madrid,Spain,Indie;Rock,30000,9/2/Sat/1,,https://dcodefest.com
+jazzaldia,Jazzaldia San Sebastián,San Sebastián,Spain,Jazz,150000,7/4/Wed/5,,https://jazzaldia.eus
+ibiza-closing-week,Ibiza Closing Season,Ibiza,Spain,Electronic,200000,10/1/Thu/10,,
+reggaeton-beach,Reggaeton Beach Festival,Benidorm,Spain,Latin;Pop,120000,7/2/Fri/3,,https://reggaetonbeachfestival.com
+mallorca-live,Mallorca Live Festival,Calvià,Spain,Indie;Pop;Hip-Hop,60000,6/2/Thu/3,,https://mallorcalivefestival.com
+o-son-do-camino,O Son do Camiño,Santiago de Compostela,Spain,Indie;Pop;Rock,120000,6/3/Thu/3,,https://www.osondocamino.es
+primavera-porto,Primavera Sound Porto,Porto,Portugal,Indie;Pop;Electronic;Rock,120000,6/2/Thu/3,,https://www.primaverasound.com
+nos-alive,NOS Alive,Oeiras,Portugal,Rock;Indie;Pop,165000,7/2/Thu/3,,https://www.nosalive.com
+rock-in-rio-lisboa,Rock in Rio Lisboa,Lisbon,Portugal,Rock;Pop,300000,6/3/Sat/2+7,even,https://rockinrio.com/lisboa
+boom-festival,Boom Festival,Idanha-a-Nova,Portugal,Electronic;Arts,40000,7/L/Fri/8,even,https://www.boomfestival.org
+meo-sudoeste,MEO Sudoeste,Zambujeira do Mar,Portugal,Pop;Hip-Hop;Electronic,150000,8/1/Wed/5,,https://meosudoeste.pt
+paredes-de-coura,Vodafone Paredes de Coura,Paredes de Coura,Portugal,Indie;Rock,100000,8/3/Wed/4,,https://www.paredesdecoura.com
+super-bock-super-rock,Super Bock Super Rock,Sesimbra,Portugal,Indie;Hip-Hop;Rock,90000,7/3/Thu/3,,https://superbocksuperrock.pt
+neopop,Neopop,Viana do Castelo,Portugal,Electronic,60000,8/2/Thu/3,,https://neopopfestival.com
+rock-en-seine,Rock en Seine,Saint-Cloud,France,Rock;Indie;Pop,150000,8/L/Wed/5,,https://www.rockenseine.com
+hellfest,Hellfest,Clisson,France,Metal;Punk,240000,6/3/Thu/4,,https://hellfest.fr
+solidays,Solidays,Paris,France,Pop;Hip-Hop;Electronic,230000,6/L/Fri/3,,https://www.solidays.org
+vieilles-charrues,Les Vieilles Charrues,Carhaix,France,Pop;Rock;Hip-Hop,280000,7/3/Thu/4,,https://www.vieillescharrues.asso.fr
+we-love-green,We Love Green,Paris,France,Indie;Hip-Hop;Electronic,110000,6/1/Fri/3,,https://www.welovegreen.fr
+lollapalooza-paris,Lollapalooza Paris,Paris,France,Pop;Hip-Hop;Electronic,120000,7/3/Fri/3,,https://www.lollaparis.com
+eurockeennes,Eurockéennes de Belfort,Belfort,France,Rock;Hip-Hop;Indie,130000,7/1/Thu/4,,https://www.eurockeennes.fr
+francofolies,Francofolies de La Rochelle,La Rochelle,France,Pop;Rock,150000,7/2/Wed/5,,https://www.francofolies.fr
+main-square,Main Square Festival,Arras,France,Rock;Pop;Hip-Hop,130000,7/1/Fri/3,,https://www.mainsquarefestival.fr
+printemps-de-bourges,Printemps de Bourges,Bourges,France,Pop;Hip-Hop;Indie,200000,4/3/Tue/6,,https://www.printemps-bourges.com
+jazz-a-vienne,Jazz à Vienne,Vienne,France,Jazz,200000,6/L/Thu/16,,https://www.jazzavienne.com
+jazz-in-marciac,Jazz in Marciac,Marciac,France,Jazz,250000,7/L/Thu/18,,https://www.jazzinmarciac.com
+nuits-sonores,Nuits Sonores,Lyon,France,Electronic,150000,5/3/Wed/5,,https://nuits-sonores.com
+fete-de-la-musique,Fête de la Musique,Paris,France,Pop;Rock;Jazz;Electronic;World,10000000,F/06-21/1,,https://fetedelamusique.culture.gouv.fr
+transmusicales,Rencontres Trans Musicales,Rennes,France,Indie;Electronic;World,60000,12/1/Wed/5,,https://www.lestrans.com
+avignon-festival,Festival d'Avignon,Avignon,France,Arts,150000,7/1/Sat/21,,https://festival-avignon.com
+nuit-blanche-paris,Nuit Blanche Paris,Paris,France,Arts,1000000,6/1/Sat/1,,https://www.paris.fr/nuitblanche
+art-basel-paris,Art Basel Paris,Paris,France,Arts,65000,10/3/Wed/5,,https://www.artbasel.com
+les-ardentes,Les Ardentes,Liège,Belgium,Hip-Hop,140000,7/1/Thu/4,,https://www.lesardentes.be
+fete-des-lumieres,Fête des Lumières,Lyon,France,Arts,1800000,12/1/Thu/4,,https://www.fetedeslumieres.lyon.fr
+pitchfork-paris,Pitchfork Music Festival Paris,Paris,France,Indie;Electronic,30000,11/1/Mon/7,,
+venice-biennale,Venice Biennale Art,Venice,Italy,Arts,700000,5/2/Sat/198,even,https://www.labiennale.org
+venice-architecture,Venice Biennale Architecture,Venice,Italy,Arts,300000,5/2/Sat/190,odd,https://www.labiennale.org
+umbria-jazz,Umbria Jazz,Perugia,Italy,Jazz,400000,7/2/Fri/10,,https://www.umbriajazz.it
+firenze-rocks,Firenze Rocks,Florence,Italy,Rock;Metal,200000,6/2/Thu/4,,https://www.firenzerocks.it
+i-days,I-Days Milano,Milan,Italy,Rock;Pop;Hip-Hop,300000,6/2/Fri/30,,https://www.idays.it
+sanremo,Sanremo Music Festival,Sanremo,Italy,Pop,15000,2/2/Tue/5,,https://www.rai.it/sanremo
+kappa-futur,Kappa FuturFestival,Turin,Italy,Electronic,100000,7/1/Fri/3,,https://kappafuturfestival.it
+arena-di-verona,Arena di Verona Opera Festival,Verona,Italy,Classical,400000,6/2/Fri/80,,https://www.arena.it
+ravenna-festival,Ravenna Festival,Ravenna,Italy,Classical,60000,6/1/Sat/50,,https://www.ravennafestival.org
+roskilde,Roskilde Festival,Roskilde,Denmark,Rock;Indie;Hip-Hop;Electronic,130000,6/L/Sat/8,,https://www.roskilde-festival.dk
+northside,NorthSide,Aarhus,Denmark,Indie;Rock;Pop,35000,6/1/Thu/3,,https://www.northside.dk
+distortion,Distortion,Copenhagen,Denmark,Electronic,100000,6/1/Wed/5,,https://cphdistortion.dk
+copenhagen-jazz,Copenhagen Jazz Festival,Copenhagen,Denmark,Jazz,260000,7/1/Fri/10,,https://jazz.dk
+smukfest,Smukfest,Skanderborg,Denmark,Pop;Rock,50000,8/1/Wed/5,,https://www.smukfest.dk
+copenhell,Copenhell,Copenhagen,Denmark,Metal,90000,6/3/Wed/4,,https://www.copenhell.dk
+way-out-west,Way Out West,Gothenburg,Sweden,Indie;Hip-Hop;Pop,50000,8/2/Thu/3,,https://www.wayoutwest.se
+sweden-rock,Sweden Rock Festival,Sölvesborg,Sweden,Rock;Metal,130000,6/1/Wed/4,,https://www.swedenrock.com
+lollapalooza-stockholm,Lollapalooza Stockholm,Stockholm,Sweden,Pop;Hip-Hop;Rock,90000,6/L/Fri/3,,https://www.lollapaloozasweden.com
+oya,Øyafestivalen,Oslo,Norway,Indie;Rock;Hip-Hop,90000,8/2/Tue/4,,https://oyafestivalen.no
+tons-of-rock,Tons of Rock,Oslo,Norway,Metal;Rock,90000,6/4/Wed/4,,https://tonsofrock.no
+bergenfest,Bergenfest,Bergen,Norway,Rock;Pop;Folk,40000,6/2/Wed/4,,https://bergenfest.no
+flow-festival,Flow Festival,Helsinki,Finland,Indie;Electronic;Hip-Hop,85000,8/2/Fri/3,,https://www.flowfestival.com
+ruisrock,Ruisrock,Turku,Finland,Pop;Rock;Hip-Hop,105000,7/1/Fri/3,,https://ruisrock.fi
+tuska,Tuska,Helsinki,Finland,Metal,60000,6/L/Fri/3,,https://tuska.fi
+provinssi,Provinssi,Seinäjoki,Finland,Rock;Pop,75000,6/L/Thu/3,,https://provinssi.fi
+pori-jazz,Pori Jazz,Pori,Finland,Jazz;R&B/Soul,60000,7/3/Fri/3,,https://porijazz.fi
+iceland-airwaves,Iceland Airwaves,Reykjavík,Iceland,Indie;Electronic,9000,11/1/Thu/3,,https://icelandairwaves.is
+sziget,Sziget Festival,Budapest,Hungary,Pop;Rock;Indie;Electronic;Hip-Hop;Arts,430000,8/2/Wed/6,,https://szigetfestival.com
+balaton-sound,Balaton Sound,Zamárdi,Hungary,Electronic,140000,7/1/Wed/4,,https://balatonsound.com
+volt,VOLT Festival,Sopron,Hungary,Pop;Rock;Hip-Hop,150000,6/L/Wed/4,,
+exit,EXIT Festival,Novi Sad,Serbia,Electronic;Rock;Hip-Hop,200000,7/2/Thu/4,,https://www.exitfest.org
+guca-trumpet,Guča Trumpet Festival,Guča,Serbia,Folk;World,300000,8/2/Wed/5,,
+openers,Open'er Festival,Gdynia,Poland,Rock;Pop;Hip-Hop;Indie,140000,7/1/Wed/4,,https://opener.pl
+off-festival,OFF Festival,Katowice,Poland,Indie;Rock,25000,8/1/Fri/3,,https://off-festival.pl
+pol-and-rock,Pol'and'Rock Festival,Czaplinek,Poland,Rock;Punk,500000,7/L/Thu/3,,https://polandrock.pl
+audioriver,Audioriver,Płock,Poland,Electronic,25000,7/L/Fri/3,,https://audioriver.pl
+unsound,Unsound,Kraków,Poland,Electronic;Arts,20000,10/1/Sun/7,,https://www.unsound.pl
+colours-of-ostrava,Colours of Ostrava,Ostrava,Czech Republic,Pop;Rock;World;Indie,50000,7/3/Wed/4,,https://www.colours.cz
+rock-for-people,Rock for People,Hradec Králové,Czech Republic,Rock;Indie;Punk,40000,6/2/Thu/3,,https://www.rockforpeople.cz
+brutal-assault,Brutal Assault,Jaroměř,Czech Republic,Metal,20000,8/2/Wed/4,,https://brutalassault.cz
+prague-spring,Prague Spring International Music Festival,Prague,Czech Republic,Classical,50000,F/05-12/23,,https://festival.cz
+pohoda,Pohoda,Trenčín,Slovakia,Indie;World;Rock,30000,7/2/Thu/3,,https://www.pohodafestival.sk
+untold,UNTOLD,Cluj-Napoca,Romania,Electronic;Pop,400000,8/1/Thu/4,,https://untold.com
+neversea,Neversea,Constanța,Romania,Electronic;Pop,270000,7/1/Thu/4,,https://neversea.com
+electric-castle,Electric Castle,Bonțida,Romania,Rock;Electronic;Indie,200000,7/3/Wed/5,,https://electriccastle.ro
+saga-festival,SAGA Festival,Bucharest,Romania,Electronic,200000,6/3/Fri/3,,https://sagafestival.com
+ultra-europe,Ultra Europe,Split,Croatia,Electronic,150000,7/2/Fri/3,,https://ultraeurope.com
+hideout,Hideout Festival,Novalja,Croatia,Electronic,15000,7/1/Sun/5,,https://hideoutfestival.com
+sonus,Sonus Festival,Novalja,Croatia,Electronic,15000,8/3/Sun/5,,https://sonus-festival.com
+outlook-origins,Outlook Origins,Tisno,Croatia,Electronic;Reggae,8000,8/L/Wed/5,,
+inmusic,INmusic Festival,Zagreb,Croatia,Rock;Indie,90000,6/4/Mon/3,,https://www.inmusicfestival.com
+sea-dance,Sea Dance Festival,Budva,Montenegro,Electronic,60000,8/L/Thu/3,,https://seadancefestival.me
+release-athens,Release Athens,Athens,Greece,Rock;Pop,80000,6/1/Wed/30,,https://releaseathens.gr
+rockwave,Rockwave Festival,Athens,Greece,Rock;Metal,60000,7/1/Fri/3,,https://rockwavefestival.gr
+athens-epidaurus,Athens Epidaurus Festival,Athens,Greece,Arts;Classical,200000,6/1/Sat/60,,https://aefestival.gr
+lost-and-found,Lost and Found Festival,St. Paul's Bay,Malta,Electronic,15000,5/1/Fri/4,,https://lostandfoundfestival.com
+glitch,Glitch Festival,Gżira,Malta,Electronic,5000,8/1/Thu/4,,https://glitch-festival.com
+positivus,Positivus,Riga,Latvia,Indie;Pop,40000,7/3/Fri/3,,https://positivusfestival.com
+weekend-fest-baltic,Weekend Festival Baltic,Pärnu,Estonia,Electronic;Hip-Hop,90000,8/1/Thu/3,,https://weekendfestival.ee
+tallinn-music-week,Tallinn Music Week,Tallinn,Estonia,Indie;Pop;Electronic,30000,5/1/Wed/5,,https://tallinnmusicweek.ee
+granatos-live,Granatos Live,Šiauliai,Lithuania,Pop;Hip-Hop;Electronic,40000,8/1/Fri/3,,https://granatoslive.lt
+metaldays,Metaldays,Velenje,Slovenia,Metal,15000,7/L/Sun/6,,https://www.metaldays.net
+spirit-of-burgas,Spirit of Burgas,Burgas,Bulgaria,Electronic;Pop,50000,8/2/Fri/3,,
+afro-nation-portugal,Afro Nation Portugal,Portimão,Portugal,Afro;Hip-Hop;R&B/Soul,40000,7/1/Wed/3,,https://www.afronation.com
+tomorrowland-winter,Tomorrowland Winter,Alpe d'Huez,France,Electronic,22000,3/3/Sat/8,,https://www.tomorrowland.com
