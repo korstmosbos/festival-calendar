@@ -349,10 +349,10 @@ def write_ics(path, name, items, byid, stamp):
     path.write_text("\r\n".join(fold(l) for l in lines) + "\r\n", encoding="utf-8")
 
 
-# The published site may only run its own script file and load its own data; fonts come from
-# Google Fonts. Inline scripts, inline styles, other hosts, frames, plugins and form posts are blocked.
-CSP = ("default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; "
-       "font-src https://fonts.gstatic.com; connect-src 'self'; img-src 'self'; base-uri 'none'; "
+# The published site may only run its own script file, styles and data, and uses the visitor's
+# system fonts. Inline scripts, inline styles, other hosts, fonts, frames, plugins and form posts are blocked.
+CSP = ("default-src 'none'; script-src 'self'; style-src 'self'; "
+       "font-src 'none'; connect-src 'self'; img-src 'self'; base-uri 'none'; "
        "form-action 'none'; object-src 'none'; manifest-src 'none'; upgrade-insecure-requests")
 
 
